@@ -1,0 +1,76 @@
+/* ================================================================= */
+/* === PÁGINA DE ATIVIDADE PRÁTICA: TEXTOS (VERSÃO CORRIGIDA) === */
+/* ================================================================= */
+
+/* --- Estilos Gerais da Página e Lições --- */
+.pagina-atividade .conteudo-atividade { padding: 20px; }
+.titulo-pagina-atividade { color: #FF6B6B; margin-bottom: 30px; font-size: 2em; text-align: center; }
+.licao { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px 25px; margin-bottom: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.07); }
+.licao-header, .licao-enunciado { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.titulo-licao { font-size: 1.7em; color: #4A4A4A; margin: 0; text-align: left; flex-grow: 1; }
+.licao-enunciado p { font-size: 1.15em; color: #555; margin: 0; line-height: 1.6; text-align: left; flex-grow: 1; }
+.btn-audio-auxiliar { background: none; border: none; font-size: 1.6em; color: #FFC107; cursor: pointer; padding: 0 5px; transition: color 0.2s ease, transform 0.2s ease; flex-shrink: 0; }
+.btn-audio-auxiliar:hover { color: #FFA000; transform: scale(1.1); }
+.btn-audio-auxiliar.audio-tocando { color: #77DD77; }
+.licao-feedback-progresso { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; margin-bottom: 25px; padding: 10px 0; }
+.progresso-circular-container { text-align: center; }
+.progresso-circular { display: block; margin: 0 auto 5px auto; transform: rotate(-90deg); }
+.progresso-circular-fundo { fill: none; stroke: #e6e6e6; stroke-width: 3.8; }
+.progresso-circular-barra { fill: none; stroke: #e6e6e6; stroke-width: 2.8; stroke-linecap: round; transition: stroke-dasharray 0.3s ease-out, stroke 0.3s ease-out; }
+.progresso-circular-barra.cor-acerto { stroke: #77DD77 !important; }
+.progresso-circular-barra.cor-erro { stroke: #FF6B6B !important; }
+.progresso-circular-texto { font-family: 'Open Sans', sans-serif; font-size: 0.6em; font-weight: bold; fill: #555; text-anchor: middle; transform: rotate(90deg) translate(0, -33px); }
+.legenda-progresso { font-size: 0.85em; color: #666; margin-top: 0; }
+.area-desafios-licao { padding: 20px; background-color: #fff9f0; border: 1px dashed #ffe6c1; border-radius: 8px; margin-top: 15px; margin-bottom: 25px; min-height: 200px; display: flex; flex-direction: column; align-items: center; gap: 25px; }
+.btn-refazer-licao.btn-acao { background-color: #FFC107; color: #424242; border-color: #FBC02D; margin-top: 0; width: auto; }
+.btn-refazer-licao.btn-acao:hover { background-color: #FFA000; border-color: #F9A825; }
+
+/* --- Estilos Específicos para Cada Lição --- */
+
+/* LIÇÃO 1, 2 e 3 (Compartilham alguns estilos) */
+.desafio-item-licaotextos1, .desafio-item-licaotextos2, .desafio-item-licaotextos3 { width: 100%; max-width: 800px; border: 2px solid red; /* BORDA DE TESTE */ padding: 10px; }
+.texto-container-l1t, .texto-container-l2t, .texto-container-l3t { background-color: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: justify; font-size: 1.1em; line-height: 1.7; border: 1px solid #eee; }
+.pergunta-texto-l1t, .pergunta-sentimento-l2t, .pergunta-moral-l3t { font-size: 1.2em; font-weight: bold; color: #333; margin-bottom: 10px; text-align: center; }
+.opcoes-resposta-l1t, .opcoes-moral-l3t { display: flex; flex-direction: column; gap: 10px; }
+.opcao-resposta-l1t, .opcao-moral-l3t { background-color: #f8f9fa; border: 2px solid #dee2e6; border-radius: 8px; padding: 12px; text-align: left; cursor: pointer; transition: all 0.2s ease; font-size: 1em; }
+.opcao-resposta-l1t:hover:not(.desabilitada), .opcao-moral-l3t:hover:not(.desabilitada) { background-color: #e9ecef; border-color: #adb5bd; }
+.opcao-resposta-l1t.correta, .opcao-moral-l3t.correta { background-color: #d4edda !important; border-color: #c3e6cb !important; }
+.opcao-resposta-l1t.errada, .opcao-moral-l3t.errada { background-color: #f8d7da !important; border-color: #f5c6cb !important; animation: shake 0.4s; }
+.opcao-resposta-l1t.desabilitada, .opcao-moral-l3t.desabilitada { opacity: 0.6; cursor: not-allowed; }
+.opcao-resposta-l1t.correta-nao-escolhida, .opcao-moral-l3t.correta-nao-escolhida { border-color: #28a745 !important; }
+
+/* LIÇÃO 2 (Estilos únicos) */
+.opcoes-sentimento-l2t { display: flex; justify-content: center; gap: 20px; }
+.opcao-sentimento-l2t { font-size: 4em; cursor: pointer; padding: 10px; border-radius: 50%; transition: all 0.2s ease; border: 3px solid transparent; }
+.opcao-sentimento-l2t:hover:not(.desabilitada) { transform: scale(1.2); background-color: #f9f9f9; }
+.opcao-sentimento-l2t.correta { border-color: #2ecc71; background-color: #e8f5e9; }
+.opcao-sentimento-l2t.errada { animation: shake 0.5s; }
+.opcao-sentimento-l2t.desabilitada { opacity: 0.4; pointer-events: none; }
+.opcao-sentimento-l2t.correta-nao-escolhida { border-color: #2ecc71; }
+
+/* LIÇÃO 4 */
+.desafio-item-licaotextos4 { width: 100%; max-width: 700px; border: 2px solid blue; /* BORDA DE TESTE */ padding: 10px; }
+.paragrafos-container-l4t { display: flex; flex-direction: column; gap: 10px; }
+.paragrafo-ordenavel-l4t { background-color: #fff; border: 1px solid #ddd; border-left: 5px solid #3498db; padding: 15px; border-radius: 8px; cursor: grab; font-size: 1.1em; line-height: 1.6; }
+.paragrafo-ordenavel-l4t.arrastando { opacity: 0.5; background-color: #eaf6ff; }
+.btn-verificar-ordem-l4t { margin-top: 20px; font-size: 1.2em; padding: 12px 30px; }
+.feedback-ordem-l4t.correta .paragrafo-ordenavel-l4t { border-color: #2ecc71; }
+.feedback-ordem-l4t.errada { animation: shake 0.5s; }
+
+/* LIÇÃO 5 */
+.desafio-item-licaotextos5 { width: 100%; max-width: 800px; text-align: left; border: 2px solid green; /* BORDA DE TESTE */ padding: 10px; }
+.historia-container-l5t { background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #eee; margin-bottom: 20px; min-height: 100px; }
+.paragrafo-historia-l5t { font-size: 1.1em; line-height: 1.7; margin-bottom: 10px; color: #333; }
+.paragrafo-historia-l5t.adicionado { font-style: italic; color: #16a085; }
+.opcoes-continuacao-l5t { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+.opcoes-continuacao-l5t p { font-weight: bold; font-size: 1.1em; color: #555; }
+.opcao-continuacao-l5t { background-color: #fdf2e9; border: 2px solid #fad7a0; border-radius: 8px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.2s ease; font-size: 1em; }
+.opcao-continuacao-l5t:hover { background-color: #fae5d3; border-color: #f5b041; }
+.opcoes-continuacao-l5t.desabilitada .opcao-continuacao-l5t { opacity: 0.6; cursor: not-allowed; }
+.feedback-fim-historia-l5t { font-size: 1.3em; font-weight: bold; text-align: center; color: #27ae60; }
+
+
+/* --- GERAL --- */
+.navegacao-atividade { margin-top: 40px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.navegacao-atividade .btn-acao { flex-grow: 1; max-width: calc(50% - 10px); }
+@keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-3px);} 75% {transform: translateX(3px);} }

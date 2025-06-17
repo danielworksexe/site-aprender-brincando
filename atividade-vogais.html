@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática: Vogais - Aprender Brincando</title>
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="atividade-vogais-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playwrite+BR:wght@100..400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="img/logo-aprender-brincando.png" alt="Logo Aprender Brincando" class="logo">
+            <h1>Atividade Prática: Vogais</h1>
+        </div>
+    </header>
+
+    <main class="container pagina-atividade">
+        <section class="conteudo-atividade">
+            <h2 class="titulo-pagina-atividade">Pratique o que aprendeu sobre as Vogais!</h2>
+
+            <article class="licao" id="licao1">
+                <div class="licao-header">
+                    <h3 class="titulo-licao" id="tituloLicao1">Lição 1: Encontre as Vogais!</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicao1Titulo" aria-label="Ouvir título da lição 1">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p id="enunciadoLicao1">Clique apenas nas vogais de cada palavra abaixo. Se errar em uma letra que não é vogal, não será 100%!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicao1Enunciado" aria-label="Ouvir enunciado da lição 1">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"><button class="btn-ajuda-progresso" data-licao-id="Licao1" aria-label="Ajuda sobre o progresso da lição 1">?</button></div>
+                    <div class="progresso-circular-container" id="progressoLicao1Container">
+                        <svg class="progresso-circular" width="100" height="100" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicao1" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <text x="18" y="20.35" class="progresso-circular-texto" id="textoLicao1">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicao1">Acertos</p>
+                    </div>
+                </div>
+                <div class="area-palavras-licao1" id="areaPalavrasLicao1"></div>
+                <button class="btn-refazer-licao btn-acao" id="refazerLicao1" data-audio-refazer="audioRefazerAtividade">Refazer Lição 1</button>
+            </article>
+            <article class="licao" id="licao2">
+                <div class="licao-header">
+                    <h3 class="titulo-licao" id="tituloLicao2">Lição 2: Complete as Palavras!</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicao2Titulo" aria-label="Ouvir título da lição 2">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p id="enunciadoLicao2">Ouça a palavra e clique na vogal que falta para completá-la.</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicao2Enunciado" aria-label="Ouvir enunciado da lição 2">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"><button class="btn-ajuda-progresso" data-licao-id="Licao2" aria-label="Ajuda sobre o progresso da lição 2">?</button></div>
+                    <div class="progresso-circular-container" id="progressoLicao2Container">
+                        <svg class="progresso-circular" width="100" height="100" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicao2" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <text x="18" y="20.35" class="progresso-circular-texto" id="textoLicao2">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicao2">Acertos</p>
+                    </div>
+                </div>
+                <div class="area-palavras-licao2" id="areaPalavrasLicao2"></div>
+                <button class="btn-refazer-licao btn-acao" id="refazerLicao2" data-audio-refazer="audioRefazerAtividade">Refazer Lição 2</button>
+            </article>
+            <article class="licao" id="licao3">
+                <div class="licao-header">
+                    <h3 class="titulo-licao" id="tituloLicao3">Lição 3: Qual é a Vogal?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicao3Titulo" aria-label="Ouvir título da lição 3">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p id="enunciadoLicao3">Ouça o som e clique na vogal correta. Você só tem uma chance por som!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicao3Enunciado" aria-label="Ouvir enunciado da lição 3">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"><button class="btn-ajuda-progresso" data-licao-id="Licao3" aria-label="Ajuda sobre o progresso da lição 3">?</button></div>
+                    <div class="progresso-circular-container" id="progressoLicao3Container">
+                        <svg class="progresso-circular" width="100" height="100" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicao3" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <text x="18" y="20.35" class="progresso-circular-texto" id="textoLicao3">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicao3">Acertos</p>
+                    </div>
+                </div>
+                <div class="area-desafios-licao3" id="areaDesafiosLicao3"></div>
+                <button class="btn-refazer-licao btn-acao" id="refazerLicao3" data-audio-refazer="audioRefazerAtividade">Refazer Lição 3</button>
+            </article>
+            <article class="licao" id="licao4">
+                <div class="licao-header">
+                    <h3 class="titulo-licao" id="tituloLicao4">Lição 4: Qual Vogal Começa?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicao4Titulo" aria-label="Ouvir título da lição 4">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p id="enunciadoLicao4">Ouça a palavra e clique na vogal com que ela começa. Apenas uma chance!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicao4Enunciado" aria-label="Ouvir enunciado da lição 4">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"><button class="btn-ajuda-progresso" data-licao-id="Licao4" aria-label="Ajuda sobre o progresso da lição 4">?</button></div>
+                    <div class="progresso-circular-container" id="progressoLicao4Container">
+                        <svg class="progresso-circular" width="100" height="100" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicao4" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <text x="18" y="20.35" class="progresso-circular-texto" id="textoLicao4">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicao4">Acertos</p>
+                    </div>
+                </div>
+                <div class="area-desafios-licao4" id="areaDesafiosLicao4"></div>
+                <button class="btn-refazer-licao btn-acao" id="refazerLicao4" data-audio-refazer="audioRefazerAtividade">Refazer Lição 4</button>
+            </article>
+            <div class="navegacao-atividade">
+                <a href="vogais.html" class="btn-voltar btn-acao">Voltar para Teoria</a>
+                <a href="encontros-vocalicos.html" class="btn-avancar btn-acao">Próxima Etapa</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aprender Brincando. Todos os direitos reservados.</p>
+    </footer>
+
+    <audio id="audioRefazerAtividade" src="audios/refazer_licao.mp3" preload="auto"></audio>
+    <audio id="audioAcertou" src="audios/voce acertou.mp3" preload="auto"></audio>
+    <audio id="audioErrou" src="audios/voce errou.mp3" preload="auto"></audio>
+    <audio id="audioLicao1Titulo" src="audios/vogais/licao1_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicao1Enunciado" src="audios/vogais/licao1_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicao2Titulo" src="audios/vogais/licao2_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicao2Enunciado" src="audios/vogais/licao2_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioPalavraPatoLicao2" src="audios/vogais/palavra_pato_licao2.mp3" preload="auto"></audio>
+    <audio id="audioPalavraMesaLicao2" src="audios/vogais/palavra_mesa_licao2.mp3" preload="auto"></audio>
+    <audio id="audioPalavraGatoLicao2" src="audios/vogais/palavra_gato_licao2.mp3" preload="auto"></audio>
+    <audio id="audioPalavraLivroLicao2" src="audios/vogais/palavra_livro_licao2.mp3" preload="auto"></audio>
+    <audio id="audioPalavraFogoLicao2" src="audios/vogais/palavra_fogo_licao2.mp3" preload="auto"></audio>
+    <audio id="audioPalavraDedoLicao2" src="audios/vogais/palavra_dedo_licao2.mp3" preload="auto"></audio>
+    <audio id="audioPalavraBoloLicao2" src="audios/vogais/palavra_bolo_licao2.mp3" preload="auto"></audio>
+    <audio id="audioLicao3Titulo" src="audios/vogais/licao3_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicao3Enunciado" src="audios/vogais/licao3_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioVogalA" src="audios/vogais/vogal_a.mp3" preload="auto"></audio>
+    <audio id="audioVogalE" src="audios/vogais/vogal_e.mp3" preload="auto"></audio>
+    <audio id="audioVogalI" src="audios/vogais/vogal_i.mp3" preload="auto"></audio>
+    <audio id="audioVogalO" src="audios/vogais/vogal_o.mp3" preload="auto"></audio>
+    <audio id="audioVogalU" src="audios/vogais/vogal_u.mp3" preload="auto"></audio>
+    <audio id="audioLicao4Titulo" src="audios/vogais/licao4_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicao4Enunciado" src="audios/vogais/licao4_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioPalavraAbacateLicao4" src="audios/vogais/palavra_abacate_licao4.mp3" preload="auto"></audio>
+    <audio id="audioPalavraEscolaLicao4" src="audios/vogais/palavra_escola_licao4.mp3" preload="auto"></audio>
+    <audio id="audioPalavraIgrejaLicao4" src="audios/vogais/palavra_igreja_licao4.mp3" preload="auto"></audio>
+    <audio id="audioPalavraOvelhaLicao4" src="audios/vogais/palavra_ovelha_licao4.mp3" preload="auto"></audio>
+    <audio id="audioPalavraUrubuLicao4" src="audios/vogais/palavra_urubu_licao4.mp3" preload="auto"></audio>
+    <audio id="audioPalavraAmigoLicao4" src="audios/vogais/palavra_amigo_licao4.mp3" preload="auto"></audio>
+    <audio id="audioPalavraElefanteLicao4" src="audios/vogais/palavra_elefante_licao4.mp3" preload="auto"></audio>
+
+    <script src="global-script.js"></script>
+    <script src="atividade-vogais-script.js"></script>
+</body>
+</html>

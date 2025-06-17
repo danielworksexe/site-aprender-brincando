@@ -1,0 +1,310 @@
+/* ============================================= */
+/* === PÁGINA SÍLABAS (silabas.html) === */
+/* ============================================= */
+
+/* Estilos gerais da página de etapa (herdando de global-style.css e outros) */
+.pagina-etapa .conteudo-etapa {
+    padding: 20px;
+    text-align: center;
+}
+
+.pagina-etapa > .conteudo-etapa > h2 {
+    color: #FF6B6B;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.pagina-etapa .instrucao-etapa {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitulo-secao-silabas {
+    font-size: 1.8em;
+    color: #4A90E2; 
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #4A90E2;
+    padding-bottom: 10px;
+    display: inline-block; 
+}
+
+.divisor-secao-silabas {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(74, 144, 226, 0.75), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* Grid para as famílias silábicas simples */
+.silabas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.familia-item, .silaba-complexa-item {
+    background-color: #ffffff;
+    border: 1px solid #d1d8e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.familia-header, .silaba-complexa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.familia-header h4, .categoria-silaba-complexa h4 {
+    font-size: 1.4em;
+    color: #333;
+    margin: 0;
+}
+.silaba-complexa-header .silaba-par {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; 
+}
+
+.btn-audio-familia,
+.btn-audio-silaba-complexa,
+.btn-audio-exemplos-familia,
+.btn-audio-exemplos-complexa,
+.btn-audio-auxiliar { /* Incluído .btn-audio-auxiliar para consistência de alguns estilos */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #FFC107;
+    cursor: pointer;
+    padding: 3px 5px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 1; 
+    flex-shrink: 0; /* Para evitar que encolha em flex containers */
+}
+.btn-audio-exemplos-familia, .btn-audio-exemplos-complexa {
+    font-size: 0.9em; 
+    padding: 8px 12px;
+    border: 1px solid #FFC107;
+    border-radius: 15px;
+    color: #c77700;
+    font-weight: bold;
+}
+
+.btn-audio-familia:hover,
+.btn-audio-silaba-complexa:hover,
+.btn-audio-exemplos-familia:hover,
+.btn-audio-exemplos-complexa:hover,
+.btn-audio-auxiliar:hover {
+    color: #FFA000;
+    transform: scale(1.1);
+}
+.btn-audio-exemplos-familia:hover, .btn-audio-exemplos-complexa:hover {
+    background-color: #fff8e1;
+}
+.btn-audio-auxiliar.audio-tocando,
+.btn-audio-familia.audio-tocando,
+.btn-audio-silaba-complexa.audio-tocando,
+.btn-audio-exemplos-familia.audio-tocando,
+.btn-audio-exemplos-complexa.audio-tocando { /* Estado 'tocando' para todos */
+    color: #77DD77;
+}
+
+
+.silabas-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.silaba-par {
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-width: 60px;
+}
+
+.silaba-bastao, .silaba-cursiva {
+    display: block;
+    text-align: center;
+}
+.silaba-bastao { font-size: 1.8em !important; color: #2c3e50; }
+.silaba-cursiva { font-size: 2em !important; color: #27ae60; line-height: 0.9 !important; }
+
+.exemplos-container { margin-top: 10px; text-align: left; }
+.exemplos-container h5 { font-size: 1.1em; color: #555; margin-bottom: 8px; }
+.lista-exemplos-silabas { list-style: none; padding-left: 0; font-size: 1em; color: #444; }
+.lista-exemplos-silabas li { margin-bottom: 5px; }
+.exemplo-palavra { font-weight: bold; color: #333; }
+.exemplo-palavra-complexa { font-size: 1em; color: #444; text-align: center; margin: 5px 0; }
+
+/* Sílabas Complexas */
+.silabas-grid-complexas { display: grid; grid-template-columns: 1fr; gap: 30px; }
+.categoria-silaba-complexa { background-color: #fdfdff; padding: 15px; border-radius: 8px; border: 1px solid #e0e6ef; }
+.categoria-silaba-complexa h4 { font-size: 1.3em; color: #4a69bd; margin-bottom: 15px; text-align: center; border-bottom: 1px dashed #a2b9d8; padding-bottom: 8px; }
+.silaba-complexa-item .silaba-complexa-header { gap: 10px; }
+
+/* === Seção: Como Contar as Sílabas? === */
+.explicacao-contar-silabas-container {
+    margin-top: 30px;
+    padding: 25px; /* Mais padding para dar respiro */
+    background-color: #f0f8ff; /* Azul Alice bem clarinho */
+    border: 1px solid #d6e7ff;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    text-align: left; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.explicacao-header { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinhar à esquerda */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.explicacao-header .subtitulo-secao-silabas { 
+    margin-bottom: 0; 
+    border-bottom: none; 
+    padding-bottom: 0;
+    display: inline;
+    font-size: 1.6em; /* Ajustar se necessário */
+    color: #3b7fbf; /* Tom de azul para o título da explicação */
+}
+.explicacao-header .btn-audio-auxiliar { /* Estilo para o botão de áudio do título da explicação */
+    font-size: 1.5em;
+    color: #4A90E2; /* Cor igual ao subtítulo para harmonia */
+}
+.explicacao-header .btn-audio-auxiliar:hover {
+    color: #357abd;
+}
+
+
+.explicacao-contar-silabas-conteudo p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+.explicacao-contar-silabas-conteudo p strong {
+    color: #e85a4f; /* Um vermelho/coral para destaque */
+    font-weight: bold;
+}
+
+.paragrafo-com-audio {
+    display: flex;
+    align-items: flex-start; /* Alinha o botão com o topo do parágrafo */
+    gap: 8px;
+    margin-bottom: 15px; /* Espaçamento entre os parágrafos com áudio */
+}
+.paragrafo-com-audio p {
+    flex-grow: 1; /* Parágrafo ocupa o espaço disponível */
+    margin-bottom: 0; /* Remove margem inferior do <p> dentro do flex */
+}
+.paragrafo-com-audio .btn-audio-auxiliar {
+    font-size: 1.3em; /* Tamanho um pouco menor para botões junto a parágrafos */
+    color: #5dade2; /* Azul mais suave */
+    padding-top: 2px; /* Pequeno ajuste vertical se necessário */
+}
+.paragrafo-com-audio .btn-audio-auxiliar:hover {
+    color: #3498db;
+}
+
+
+.exemplo-contagem {
+    background-color: #eaf6ff; /* Fundo azul bem clarinho para exemplos */
+    border: 1px solid #b3d9ff; 
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 1.05em; /* Ajuste geral do tamanho da fonte nos exemplos */
+}
+.exemplo-contagem p {
+    margin-bottom: 8px;
+    color: #2c3e50; /* Cor do texto nos exemplos */
+}
+.exemplo-contagem p:last-child {
+    margin-bottom: 0;
+}
+.palavra-ex-contagem {
+    font-weight: bold;
+    color: #2980b9; /* Azul para a palavra do exemplo */
+    font-size: 1.2em;
+    background-color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.dica-final-contagem {
+    font-style: italic;
+    color: #16a085; /* Verde-azulado para a dica final */
+    text-align: center;
+    margin-top: 25px !important; /* Aumentar margem superior */
+    padding: 10px;
+    background-color: #f0fff9;
+    border-left: 4px solid #16a085;
+}
+
+
+/* Navegação da Etapa */
+.navegacao-etapa {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ============================================= */
+/* === RESPONSIVIDADE SÍLABAS === */
+/* ============================================= */
+@media (max-width: 768px) {
+    .silabas-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .familia-header h4 { font-size: 1.3em; }
+    .silaba-bastao { font-size: 1.6em !important; }
+    .silaba-cursiva { font-size: 1.8em !important; }
+    .lista-exemplos-silabas { font-size: 0.95em; }
+    .categoria-silaba-complexa h4 { font-size: 1.2em; }
+
+    .explicacao-header { flex-direction: row; justify-content: center; text-align: center;} /* Centraliza melhor o título e o botão */
+    .explicacao-header .subtitulo-secao-silabas { display: block; margin-bottom: 5px; }
+    .paragrafo-com-audio { flex-direction: column; align-items: flex-start; } /* Botão abaixo do parágrafo */
+    .paragrafo-com-audio .btn-audio-auxiliar { margin-top: 5px; }
+}
+
+@media (max-width: 480px) {
+    .pagina-etapa > .conteudo-etapa > h2 { font-size: 1.8em; }
+    .subtitulo-secao-silabas { font-size: 1.6em; }
+    .silabas-grid { grid-template-columns: 1fr; }
+    .familia-header h4 { font-size: 1.2em; }
+    .silaba-par { min-width: 50px; padding: 6px 8px;}
+    .silaba-bastao { font-size: 1.5em !important; }
+    .silaba-cursiva { font-size: 1.7em !important; }
+    .lista-exemplos-silabas li { font-size: 0.9em; }
+    .btn-audio-exemplos-familia, .btn-audio-exemplos-complexa { font-size: 0.85em; padding: 6px 10px;}
+    .categoria-silaba-complexa h4 { font-size: 1.1em; }
+    .silaba-complexa-item .silaba-complexa-header { flex-direction: column; gap: 5px; }
+
+    .explicacao-contar-silabas-container { padding: 15px; }
+    .explicacao-contar-silabas-conteudo p, .exemplo-contagem p { font-size: 1em; }
+    .palavra-ex-contagem { font-size: 1.1em; }
+
+    .navegacao-etapa .btn-acao { width: 100%; margin-bottom: 10px; max-width: 100%;}
+    .navegacao-etapa .btn-acao:last-child { margin-bottom: 0; }
+}

@@ -1,0 +1,259 @@
+/* ================================================================= */
+/* === PÁGINA DE ATIVIDADE PRÁTICA: ALFABETO === */
+/* ================================================================= */
+
+.pagina-atividade .conteudo-atividade {
+    padding: 20px;
+}
+
+.titulo-pagina-atividade {
+    color: #FF6B6B;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.licao {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.licao-header,
+.licao-enunciado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.titulo-licao {
+    font-size: 1.7em;
+    color: #4A4A4A;
+    margin: 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.licao-enunciado p {
+    font-size: 1.15em;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.btn-audio-auxiliar {
+    background: none; border: none; font-size: 1.6em; color: #FFC107;
+    cursor: pointer; padding: 0 5px; transition: color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+.btn-audio-auxiliar:hover { color: #FFA000; transform: scale(1.1); }
+.btn-audio-auxiliar.audio-tocando { color: #77DD77; }
+.btn-audio-auxiliar:disabled { color: #ccc; cursor: default; transform: none; }
+
+.licao-feedback-progresso {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 20px; margin-bottom: 25px; padding: 10px 0;
+}
+.progresso-circular-container { text-align: center; }
+.progresso-circular { display: block; margin: 0 auto 5px auto; transform: rotate(-90deg); }
+.progresso-circular-fundo { fill: none; stroke: #e6e6e6; stroke-width: 3.8; }
+.progresso-circular-barra { fill: none; stroke: #e6e6e6; stroke-width: 2.8; stroke-linecap: round; transition: stroke-dasharray 0.3s ease-out, stroke 0.3s ease-out; }
+.progresso-circular-barra.cor-acerto { stroke: #77DD77 !important; }
+.progresso-circular-barra.cor-erro { stroke: #FF6B6B !important; }
+.progresso-circular-texto { font-family: 'Open Sans', sans-serif; font-size: 0.6em; font-weight: bold; fill: #555; text-anchor: middle; transform: rotate(90deg) translate(0, -33px); }
+.legenda-progresso { font-size: 0.85em; color: #666; margin-top: 0; }
+
+.area-desafios-licao {
+    padding: 20px; background-color: #eef7ff; 
+    border: 1px dashed #cce0ff; border-radius: 8px; margin-top: 15px;
+    margin-bottom: 25px; min-height: 200px; display: flex;
+    flex-direction: column; align-items: center; gap: 25px;
+}
+
+.btn-refazer-licao.btn-acao { 
+    background-color: #FFC107; color: #424242; border-color: #FBC02D;
+    margin-top: 0; width: auto;
+}
+.btn-refazer-licao.btn-acao:hover { background-color: #FFA000; border-color: #F9A825; }
+
+/* --- LIÇÃO 1 ALFABETO: O Som da Letra --- */
+.desafio-item-licaoalfabeto1 {
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+    padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%; max-width: 500px;
+}
+.btn-audio-som-letra-l1 { 
+    background-color: #5dade2; color: white; border: none; padding: 12px 20px;
+    font-size: 1.2em; font-weight: bold; border-radius: 25px; cursor: pointer;
+    transition: background-color 0.2s ease; display: flex; align-items: center; gap: 8px;
+}
+.btn-audio-som-letra-l1:hover { background-color: #3498db; }
+.opcoes-letras-licaoalfabeto1 {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;
+}
+.opcao-letra-L1A { 
+    padding: 15px 20px; border: 2px solid #ccc; border-radius: 8px;
+    font-size: 2em; 
+    cursor: pointer; background-color: #f8f9fa;
+    transition: background-color 0.2s, border-color 0.2s; min-width: 60px; text-align: center;
+}
+.opcao-letra-L1A:hover { background-color: #e9ecef; border-color: #adb5bd;}
+.opcao-letra-L1A.correta { background-color: #a5d6a7 !important; color: #1b5e20 !important; border-color: #81c784 !important; }
+.opcao-letra-L1A.errada { background-color: #ef9a9a !important; color: #c62828 !important; border-color: #e57373 !important; animation: shake 0.4s; }
+.opcao-letra-L1A.correta-nao-escolhida { background-color: #fff59d !important; color: #f9a825 !important; border-color: #ffee58 !important; }
+.opcao-letra-L1A.desabilitada { opacity: 0.6; cursor: not-allowed; pointer-events: none; }
+
+
+/* === LIÇÃO 2 ALFABETO: Figura Mágica: Qual Letra Começa? === */
+.desafio-item-licaoalfabeto2 {
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+    padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%; max-width: 500px;
+}
+.imagem-desafio-l2a { /* Agora para o emoji */
+    font-size: 6em; /* Tamanho grande para o emoji */
+    margin-bottom: 10px;
+    line-height: 1;
+    text-align: center;
+    padding: 10px;
+    min-height: 100px; /* Para dar espaço vertical */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-audio-palavra-l2a { 
+    background-color: #f39c12; color: white; border: none; padding: 10px 15px;
+    font-size: 1em; border-radius: 20px; cursor: pointer; transition: background-color 0.2s ease;
+    display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+}
+.btn-audio-palavra-l2a:hover { background-color: #d35400; }
+.opcoes-letras-licaoalfabeto2 { 
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;
+}
+/* Reutilizar .opcao-letra-L1A para as opções da Lição 2 */
+
+
+/* === LIÇÃO 3 ALFABETO: Palavra Secreta: Complete com a Letra === */
+.desafio-item-licaoalfabeto3 {
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+    padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%; max-width: 550px;
+}
+.imagem-desafio-l3a { /* Agora para o emoji */
+    font-size: 5em; /* Tamanho para o emoji */
+    margin-bottom: 10px;
+    line-height: 1;
+    text-align: center;
+    padding: 10px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.palavra-incompleta-l3a { 
+    font-size: 2.5em; font-weight: bold; color: #34495e; margin: 10px 0;
+    letter-spacing: 2px;
+}
+.palavra-incompleta-l3a .lacuna-l3a { color: #e74c3c; padding: 0 5px; }
+.palavra-incompleta-l3a .letra-preenchida-l3a { color: #2ecc71; }
+.btn-audio-palavra-l3a { 
+    background-color: #8e44ad; color: white; border: none; padding: 10px 15px;
+    font-size: 1em; border-radius: 20px; cursor: pointer; transition: background-color 0.2s ease;
+    display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+}
+.btn-audio-palavra-l3a:hover { background-color: #732d91; }
+.opcoes-letras-licaoalfabeto3 { 
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;
+}
+/* Reutilizar .opcao-letra-L1A para as opções da Lição 3 */
+
+
+/* === LIÇÃO 4 ALFABETO: Letras Fugitivas: Encontre na Palavra! === */
+.desafio-item-licaoalfabeto4 {
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+    padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%; max-width: 600px;
+}
+.prompt-letra-alvo-l4a { 
+    font-size: 1.4em; font-weight: bold; color: #2980b9; margin-bottom: 5px;
+    display: flex; align-items: center; gap:10px;
+}
+.btn-audio-prompt-l4a { 
+    background: none; border: none; font-size: 1.3em; color: #3498db;
+    cursor: pointer; padding: 0;
+}
+.btn-audio-prompt-l4a:hover { color: #217dbb; }
+.palavra-container-cacaletras-l4a { 
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;
+    padding: 10px; background-color: #ecf0f1; border-radius: 6px;
+    margin-bottom: 10px;
+}
+.letra-clicavel-l4a { 
+    font-size: 2.2em; font-weight: bold; padding: 5px 8px;
+    border: 1px solid #bdc3c7; border-radius: 4px; cursor: pointer;
+    background-color: white; transition: background-color 0.2s, transform 0.1s;
+    min-width: 35px; text-align: center; user-select: none;
+}
+.letra-clicavel-l4a:hover { background-color: #f8f9f9; transform: scale(1.05); }
+.letra-clicavel-l4a.correta-l4a { background-color: #a5d6a7 !important; color: #1b5e20 !important; border-color: #81c784 !important; cursor: default; }
+.letra-clicavel-l4a.errada-l4a { background-color: #ef9a9a !important; color: #c62828 !important; border-color: #e57373 !important; cursor: default; animation: shake 0.3s; }
+.letra-clicavel-l4a.desabilitada-l4a { opacity: 0.7; cursor: default; pointer-events: none; }
+
+
+.navegacao-atividade {
+    margin-top: 40px; display: flex; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap;
+}
+.navegacao-atividade .btn-acao { flex-grow: 1; max-width: calc(50% - 10px); }
+
+
+/* =============================================================== */
+/* === RESPONSIVIDADE (Específica para Atividade Alfabeto) === */
+/* =============================================================== */
+@media (max-width: 768px) {
+    .progresso-circular { width: 75px; height: 75px; }
+    .progresso-circular-texto { font-size: 0.45em; transform: rotate(90deg) translate(0, -24px); }
+
+    .opcao-letra-L1A { font-size: 1.8em !important; padding: 12px 15px; min-width: 50px;}
+
+    .imagem-desafio-l2a { font-size: 5em; min-height: 80px; } /* Emoji L2 */
+    .imagem-desafio-l3a { font-size: 4.5em; min-height: 70px; } /* Emoji L3 */
+    .palavra-incompleta-l3a { font-size: 2em; }
+
+    .prompt-letra-alvo-l4a { font-size: 1.2em; }
+    .letra-clicavel-l4a { font-size: 2em !important; padding: 4px 6px; min-width: 30px;}
+}
+
+@media (max-width: 480px) {
+    .licao { padding: 15px 20px; }
+    .licao-feedback-progresso { flex-direction: column; gap: 15px; align-items: center;}
+    .progresso-circular { width: 65px; height: 65px; }
+    .progresso-circular-texto { font-size: 0.4em; transform: rotate(90deg) translate(0, -21px); }
+
+    .opcoes-letras-licaoalfabeto1, .opcoes-letras-licaoalfabeto2, .opcoes-letras-licaoalfabeto3 {
+        gap: 10px;
+    }
+    .opcao-letra-L1A { font-size: 1.6em !important; padding: 10px; min-width: 45px;}
+
+    .imagem-desafio-l2a { font-size: 4.5em; } /* Emoji L2 */
+    .btn-audio-palavra-l2a { font-size: 0.9em; }
+    
+    .imagem-desafio-l3a { font-size: 4em; } /* Emoji L3 */
+    .palavra-incompleta-l3a { font-size: 1.8em; }
+    .btn-audio-palavra-l3a { font-size: 0.9em; }
+
+    .prompt-letra-alvo-l4a { flex-direction: column; text-align: center; }
+    .palavra-container-cacaletras-l4a { padding: 8px; gap: 3px; }
+    .letra-clicavel-l4a { font-size: 1.8em !important; padding: 3px 5px; min-width: 25px;}
+
+    .navegacao-atividade .btn-acao { max-width: 100%; }
+}
+
+/* Herança de animação e classes de fonte do global-style.css */
+@keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-3px);} 75% {transform: translateX(3px);} }

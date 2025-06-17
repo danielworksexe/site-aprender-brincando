@@ -1,0 +1,97 @@
+/* ================================================================= */
+/* === PÁGINA DE ATIVIDADE PRÁTICA: PALAVRAS === */
+/* ================================================================= */
+
+/* Estilos gerais consistentes com outras páginas de atividade */
+.pagina-atividade .conteudo-atividade { padding: 20px; }
+.titulo-pagina-atividade { color: #FF6B6B; margin-bottom: 30px; font-size: 2em; text-align: center; }
+.licao { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px 25px; margin-bottom: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.07); }
+.licao-header, .licao-enunciado { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.titulo-licao { font-size: 1.7em; color: #4A4A4A; margin: 0; text-align: left; flex-grow: 1; }
+.licao-enunciado p { font-size: 1.15em; color: #555; margin: 0; line-height: 1.6; text-align: left; flex-grow: 1; }
+.btn-audio-auxiliar { background: none; border: none; font-size: 1.6em; color: #FFC107; cursor: pointer; padding: 0 5px; transition: color 0.2s ease, transform 0.2s ease; flex-shrink: 0; }
+.btn-audio-auxiliar:hover { color: #FFA000; transform: scale(1.1); }
+.btn-audio-auxiliar.audio-tocando { color: #77DD77; }
+.licao-feedback-progresso { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; margin-bottom: 25px; padding: 10px 0; }
+.progresso-circular-container { text-align: center; }
+.progresso-circular { display: block; margin: 0 auto 5px auto; transform: rotate(-90deg); }
+.progresso-circular-fundo { fill: none; stroke: #e6e6e6; stroke-width: 3.8; }
+.progresso-circular-barra { fill: none; stroke: #e6e6e6; stroke-width: 2.8; stroke-linecap: round; transition: stroke-dasharray 0.3s ease-out, stroke 0.3s ease-out; }
+.progresso-circular-barra.cor-acerto { stroke: #77DD77 !important; }
+.progresso-circular-barra.cor-erro { stroke: #FF6B6B !important; }
+.progresso-circular-texto { font-family: 'Open Sans', sans-serif; font-size: 0.6em; font-weight: bold; fill: #555; text-anchor: middle; transform: rotate(90deg) translate(0, -33px); }
+.legenda-progresso { font-size: 0.85em; color: #666; margin-top: 0; }
+.area-desafios-licao { padding: 20px; background-color: #f7f9ff; border: 1px dashed #d6e0ff; border-radius: 8px; margin-top: 15px; margin-bottom: 25px; min-height: 200px; display: flex; flex-direction: column; align-items: center; gap: 25px; }
+.btn-refazer-licao.btn-acao { background-color: #FFC107; color: #424242; border-color: #FBC02D; margin-top: 0; width: auto; }
+.btn-refazer-licao.btn-acao:hover { background-color: #FFA000; border-color: #F9A825; }
+
+/* === LIÇÃO 1: Qual é a Palavra Certa? === */
+.desafio-item-licaopalavras1 { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 650px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+.emoji-desafio-l1p { font-size: 5em; line-height: 1; display: flex; align-items: center; gap: 5px; }
+.opcoes-palavras-l1p { display: flex; flex-direction: column; gap: 10px; }
+.opcao-palavra-l1p { padding: 12px 25px; border: 2px solid #ccc; border-radius: 8px; cursor: pointer; background-color: #f8f9fa; transition: all 0.2s ease; min-width: 200px; text-align: center; }
+.opcao-palavra-l1p:not(.desabilitada):hover { background-color: #e9ecef; border-color: #adb5bd; transform: translateY(-2px); }
+.opcao-palavra-l1p.estilo-bastao { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 1.5em; text-transform: uppercase; }
+.opcao-palavra-l1p.estilo-imprensa { font-family: 'Roboto Slab', serif; font-size: 1.5em; }
+.opcao-palavra-l1p.estilo-cursiva { font-family: 'Playwrite BR', cursive; font-size: 2em; text-transform: none; }
+.opcao-palavra-l1p.correta { background-color: #d4edda !important; color: #155724 !important; border-color: #c3e6cb !important; }
+.opcao-palavra-l1p.errada { background-color: #f8d7da !important; color: #721c24 !important; border-color: #f5c6cb !important; animation: shake 0.4s; }
+.opcao-palavra-l1p.correta-nao-escolhida { box-shadow: 0 0 10px 3px #77dd77; }
+.opcao-palavra-l1p.desabilitada { opacity: 0.6; cursor: not-allowed; pointer-events: none; }
+
+/* === LIÇÃO 2: Escute e Encontre === */
+.desafio-item-licaopalavras2 { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; max-width: 600px; }
+.btn-audio-palavra-l2p { background-color: #4CAF50; color: white; border: none; padding: 15px 30px; font-size: 1.3em; font-weight: bold; border-radius: 25px; cursor: pointer; transition: background-color 0.2s ease; display: flex; align-items: center; gap: 10px; }
+.btn-audio-palavra-l2p:hover { background-color: #45a049; }
+.opcoes-palavras-l2p { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+/* Reutiliza estilos .opcao-palavra-l1p da Lição 1 */
+
+/* === LIÇÃO 3: Quebra-Cabeça de Sílabas (NOVO) === */
+.desafio-item-licaopalavras3 { display: flex; flex-direction: column; align-items: center; gap: 20px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); width: 100%; max-width: 600px; }
+.dica-container-l3p { display: flex; align-items: center; gap: 10px; }
+.dica-visual-l3p { font-size: 3.5em; line-height: 1; }
+.slots-palavra-l3p { display: flex; gap: 5px; margin: 15px 0; min-height: 70px; padding: 5px; border-radius: 8px; background-color: #f8f9fa;}
+.slots-palavra-l3p.correta { background-color: #d4edda; }
+.slots-palavra-l3p.errada { animation: shake 0.5s; background-color: #f8d7da; }
+.espaco-silaba-l3p { width: 80px; height: 60px; background-color: #e9ecef; border: 2px dashed #ced4da; border-radius: 6px; display: flex; justify-content: center; align-items: center; font-size: 1.5em; font-weight: bold; color: #495057; cursor: pointer; }
+.espaco-silaba-l3p.preenchido { border-style: solid; background-color: #fffde7; border-color: #fdd835; }
+.banco-silabas-desafio-l3p { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; border-top: 1px solid #eee; padding-top: 15px; }
+.silaba-opcao-l3p { background-color: #cce5ff; border: 1px solid #b8daff; padding: 10px 15px; font-size: 1.4em; font-weight: bold; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; }
+.silaba-opcao-l3p:hover { background-color: #b8daff; transform: translateY(-2px); }
+.silaba-opcao-l3p.usada { opacity: 0.4; cursor: not-allowed; background-color: #e9ecef; border-color: #dee2e6; }
+
+/* === LIÇÃO 4: Decifre a Palavra Secreta === */
+.desafio-item-licaopalavras4 { display: flex; flex-direction: column; align-items: center; gap: 15px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); width: 100%; max-width: 500px; }
+.dica-emoji-l4p { font-size: 4em; }
+.slots-palavra-l4p { display: flex; gap: 8px; min-height: 70px; margin: 10px 0; }
+.letra-slot-l4p { width: 60px; height: 60px; background-color: #f1f3f5; border: 2px solid #dee2e6; border-bottom: 4px solid #adb5bd; border-radius: 6px; display: flex; justify-content: center; align-items: center; font-size: 2.2em; font-weight: bold; color: #343a40; cursor: pointer; }
+.letra-slot-l4p.preenchido { background-color: #fff9db; border-color: #ffe8a8; }
+.banco-letras-l4p { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; }
+.letra-disponivel-l4p { background-color: #d1ecf1; border: 1px solid #bee5eb; width: 55px; height: 55px; font-size: 2em; font-weight: bold; display: flex; justify-content: center; align-items: center; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; }
+.letra-disponivel-l4p:hover { background-color: #bee5eb; transform: translateY(-2px); }
+.letra-disponivel-l4p.oculta { visibility: hidden; }
+.feedback-palavra-l4p.correta .slots-palavra-l4p { background-color: #d4edda; border-radius: 8px; }
+.feedback-palavra-l4p.errada .slots-palavra-l4p { animation: shake 0.5s; background-color: #f8d7da; border-radius: 8px; }
+
+.navegacao-atividade { margin-top: 40px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.navegacao-atividade .btn-acao { flex-grow: 1; max-width: calc(50% - 10px); }
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+    .desafio-item-licaopalavras1 { flex-direction: column; }
+    .opcoes-palavras-l1p { margin-top: 15px; }
+    .slot-palavra-l3p, .slots-palavra-l4p { gap: 5px; }
+    .letra-slot-l4p { width: 50px; height: 50px; font-size: 1.8em; }
+    .letra-disponivel-l4p { width: 45px; height: 45px; font-size: 1.6em; }
+}
+@media (max-width: 480px) {
+    .opcao-palavra-l1p { width: 100%; font-size: 1.8em !important; }
+    .banco-silabas-l3p, .banco-letras-l4p { justify-content: space-around; }
+    .silaba-opcao-l3p { font-size: 1.1em; padding: 6px 10px; }
+    .espaco-silaba-l3p { width: 55px; height: 45px; font-size: 1.1em; }
+    .slots-palavra-l4p, .banco-letras-l4p { gap: 5px; }
+    .letra-slot-l4p { width: 40px; height: 40px; font-size: 1.5em; }
+    .letra-disponivel-l4p { width: 38px; height: 38px; font-size: 1.5em; }
+    .navegacao-atividade .btn-acao { max-width: 100%; }
+}
+@keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-3px);} 75% {transform: translateX(3px);} }

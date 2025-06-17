@@ -1,0 +1,136 @@
+/* ============================================= */
+/* === ESTILOS GLOBAIS E RESET === */
+/* ============================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif; /* Fonte padrão para o corpo */
+    line-height: 1.6;
+    background-color: #FFFDE7; /* Amarelo muito pálido */
+    color: #424242; /* Cinza escuro para texto */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container { 
+    width: 90%;
+    max-width: 960px; 
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================= */
+/* === CABEÇALHO E RODAPÉ === */
+/* ============================================= */
+header {
+    background-color: #FF6B6B; /* Vermelho Principal */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 5px solid #E55A5A; /* Vermelho Principal um pouco mais escuro */
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 90%;
+    max-width: 960px; 
+    margin: 0 auto;
+}
+.logo { 
+    height: 60px; 
+    width: auto; 
+}
+header h1 { 
+    font-size: 2.2em; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15); 
+    margin: 0; 
+}
+footer {
+    background-color: #D32F2F; /* Tom de vermelho mais escuro para o rodapé */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; 
+}
+
+/* ============================================= */
+/* === COMPONENTES COMUNS (Botões, etc.) === */
+/* ============================================= */
+.btn-acao { 
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    border: 2px solid transparent; 
+}
+.btn-voltar.btn-acao { 
+    background-color: #FFEB3B; 
+    color: #424242;
+    border-color: #FBC02D; 
+}
+.btn-voltar.btn-acao:hover { 
+    background-color: #FDD835;
+    border-color: #F9A825;
+    transform: translateY(-2px); 
+}
+.btn-avancar.btn-acao { 
+    background-color: #28a745; 
+    color: white;
+    border-color: #1e7e34; 
+}
+.btn-avancar.btn-acao:hover { 
+    background-color: #218838;
+    border-color: #19692c;
+    transform: translateY(-2px); 
+}
+
+/* Classes para estilos de fonte reutilizáveis (para opções de letras nas atividades) */
+.letra-opcao-bastao-upper { font-family: 'Open Sans', sans-serif !important; font-weight: bold !important; text-transform: uppercase !important; font-size: 1.6em !important; }
+.letra-opcao-cursiva-upper { font-family: 'Playwrite BR', cursive !important; font-size: 2em !important; line-height: 1 !important; text-transform: uppercase !important; }
+.letra-opcao-imprensa-lower { font-family: 'Roboto Slab', serif !important; text-transform: lowercase !important; font-size: 1.6em !important; }
+.letra-opcao-cursiva-lower { font-family: 'Playwrite BR', cursive !important; text-transform: lowercase !important; font-size: 2em !important; line-height: 1 !important; }
+
+
+/* ============================================= */
+/* === RESPONSIVIDADE GERAL (BÁSICA) === */
+/* ============================================= */
+@media (max-width: 768px) {
+    header h1 { font-size: 1.8em; }
+    .logo { height: 50px; }
+    .container { width: 95%; padding: 15px; max-width: 100%;}
+    .btn-acao { font-size: 0.95em; padding: 9px 18px; } 
+}
+
+@media (max-width: 480px) {
+    header h1 { font-size: 1.5em; } 
+    .header-content { flex-direction: column; gap: 5px; }
+    .logo { height: 40px; margin-bottom: 5px; }
+    .btn-acao { font-size: 0.9em; padding: 8px 15px; width: auto; }
+    .acoes-progresso, .navegacao-etapa, .navegacao-atividade { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
+    } 
+    .btn-acao { /* Em telas pequenas, botões de ação podem ocupar mais largura */
+        width: 70%; 
+        margin-bottom: 10px;
+    }
+    .btn-acao:last-child {
+        margin-bottom: 0;
+    }
+}

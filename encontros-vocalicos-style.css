@@ -1,0 +1,247 @@
+/* ===================================================== */
+/* === PÁGINA DE TEORIA DOS ENCONTROS VOCÁLICOS (encontros-vocalicos.html) === */
+/* ===================================================== */
+
+/* Estilos gerais para o conteúdo da página de etapa, se não estiverem no global-style.css de forma adequada */
+/* A classe .pagina-etapa é usada como container principal do conteúdo específico da teoria */
+.pagina-etapa .conteudo-etapa {
+    padding: 20px;
+    text-align: center; /* Centraliza o título principal da página */
+}
+
+.pagina-etapa > .conteudo-etapa > h2 { 
+    color: #FF6B6B; /* Vermelho Principal */
+    margin-bottom: 15px; /* Espaço abaixo do título principal da página */
+    font-size: 2em; 
+}
+
+.pagina-etapa .instrucao-etapa { /* Parágrafo introdutório da página */
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 35px; /* Mais espaço antes da primeira seção de tipo de encontro */
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}
+
+/* Estilos para seções de tipo de Encontro Vocálico (Ditongo, Tritongo, Hiato) */
+.tipo-encontro {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #fcfcfc; /* Fundo levemente diferente para destacar a seção do tipo */
+    border-radius: 10px;
+    border: 1px solid #ececec;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.tipo-encontro:last-child {
+    border-bottom: none; /* Remove borda inferior do último tipo de encontro */
+    margin-bottom: 20px;
+}
+
+.tipo-encontro-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #FFC107; /* Amarelo para o título da seção do tipo */
+}
+
+.tipo-encontro-header h2 { /* Título do tipo de encontro (Ditongo, etc.) */
+    color: #E55A5A; /* Vermelho um pouco mais escuro para os títulos de seção */
+    font-size: 1.9em;
+    margin: 0;
+    text-align: left;
+}
+
+/* O botão .btn-audio-auxiliar (usado nos headers de tipo de encontro) já está estilizado no global-style.css ou atividade-style.css */
+/* Se precisar de ajuste específico: */
+.tipo-encontro-header .btn-audio-auxiliar {
+    font-size: 1.6em; 
+    color: #FFB300; /* Um tom de laranja/amarelo */
+}
+.tipo-encontro-header .btn-audio-auxiliar:hover {
+    color: #E65100;
+}
+
+
+.tipo-encontro > p { /* Parágrafo de explicação do tipo de encontro */
+    font-size: 1.15em;
+    color: #4f4f4f;
+    margin-bottom: 25px;
+    text-align: left;
+    line-height: 1.7;
+    padding: 0 10px; /* Pequeno padding para o texto explicativo */
+}
+
+.encontros-grid { /* Grid para os cards de cada exemplo de encontro */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px; 
+    margin-top: 20px; /* Espaço acima da grade de exemplos */
+}
+
+.apresentacao-encontro { /* Card individual de cada exemplo de encontro */
+    background-color: #fff; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 3px 7px rgba(0,0,0,0.07); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+    display: flex; 
+    flex-direction: column; 
+}
+.apresentacao-encontro:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1); 
+}
+
+.encontro-header { /* Header do card (encontro destaque + áudio) */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 20px; 
+    border-bottom: 2px dashed #FFD54F; /* Amarelo */
+    padding-bottom: 15px; 
+}
+
+.encontro-destaque { /* Encontro vocálico principal em tamanho grande (AI, UAI, etc.) */
+    font-size: 3.2em; /* Ajustado para encontros com mais letras */
+    color: #FF6B6B; 
+    margin: 0; 
+    margin-right: 15px; 
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: bold; 
+    line-height: 1;
+    letter-spacing: 1px; /* Pequeno espaçamento para encontros */
+}
+
+.btn-audio-encontro { /* Botão de áudio para o encontro destaque */
+    background: none; 
+    border: none; 
+    font-size: 2em; 
+    color: #FFC107; /* Amarelo */
+    cursor: pointer; 
+    padding: 5px; 
+    transition: color 0.2s ease, transform 0.2s ease; 
+    flex-shrink: 0; 
+}
+.btn-audio-encontro:hover { 
+    color: #FFA000; /* Amarelo mais escuro */
+    transform: scale(1.15); 
+}
+.btn-audio-encontro.audio-tocando { 
+    color: #77DD77; /* Verde */
+}
+
+.formatos-encontro-container { /* Grid para os 4 formatos de escrita do encontro */
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+    text-align: center; 
+    margin-bottom: 15px; /* Espaço abaixo dos formatos */
+}
+
+.formato-encontro { /* Container de um formato específico */
+    padding: 10px; 
+    background-color: #f9f9f9; 
+    border-radius: 6px; 
+    border: 1px solid #f0f0f0; 
+}
+
+.encontro-display { /* Onde o encontro é exibido nos 4 formatos */
+    display: block; 
+    /* font-family, font-size, text-transform são aplicados pelas classes .letra-opcao-* no global-style.css */
+    margin-bottom: 5px; 
+    min-height: 50px; /* Ajustado para encontros */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    line-height: 1; /* Importante para fontes cursivas */
+}
+
+.descricao-formato { 
+    font-size: 0.8em; 
+    color: #777; 
+}
+
+.exemplos-palavras-encontro { 
+    margin-top: 20px; 
+    padding-top: 15px; 
+    border-top: 1px solid #f0f0f0; 
+    text-align: left; 
+}
+.exemplos-palavras-encontro h4 { 
+    font-size: 1.05em; 
+    color: #333; 
+    margin-bottom: 10px; 
+    font-weight: bold; 
+}
+.lista-palavras-container { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+.lista-palavras { 
+    font-size: 1em; 
+    color: #555; 
+    line-height: 1.6; 
+    margin: 0; 
+    flex-grow: 1; 
+}
+.btn-audio-palavras-encontro { /* Botão de áudio para os exemplos de palavras */
+    background: none; 
+    border: none; 
+    font-size: 1.5em; 
+    color: #007bff; /* Azul */
+    cursor: pointer; 
+    padding: 5px; 
+    line-height: 1; 
+    transition: color 0.2s ease, transform 0.2s ease; 
+    flex-shrink: 0; 
+}
+.btn-audio-palavras-encontro:hover { 
+    color: #0056b3; /* Azul mais escuro */
+    transform: scale(1.1); 
+}
+.btn-audio-palavras-encontro.audio-tocando { 
+    color: #28a745; /* Verde */
+}
+
+.navegacao-etapa { /* Container dos botões Voltar/Avançar na página de teoria */
+    margin-top: 40px;
+}
+
+/* =============================================================== */
+/* === RESPONSIVIDADE (Específica para Encontros Vocálicos Teoria) === */
+/* =============================================================== */
+@media (max-width: 768px) {
+    .pagina-etapa > .conteudo-etapa > h2 { font-size: 1.8em; } 
+    .instrucao-etapa { font-size: 1em; } 
+    .tipo-encontro-header h2 { font-size: 1.6em; }
+    .tipo-encontro > p { font-size: 1em; }
+    .encontros-grid { grid-template-columns: 1fr; /* Uma coluna para os cards de encontro */ }
+    .encontro-destaque { font-size: 3em; } 
+    .btn-audio-encontro { font-size: 1.8em; } 
+    /* Os .encontro-display já herdam a responsividade das classes .letra-opcao-* */
+    .btn-audio-palavras-encontro { font-size: 1.4em; } 
+    .lista-palavras { font-size: 0.95em; } 
+    .exemplos-palavras-encontro h4 { font-size: 1em; } 
+}
+
+@media (max-width: 480px) {
+    .pagina-etapa > .conteudo-etapa > h2 { font-size: 1.6em; }
+    .tipo-encontro-header h2 { font-size: 1.5em; }
+    .tipo-encontro > p { font-size: 0.9em; }
+    .encontro-destaque { font-size: 2.5em; } 
+    .btn-audio-encontro { font-size: 1.6em; } 
+    /* Os .encontro-display já herdam a responsividade das classes .letra-opcao-* */
+    .formatos-encontro-container { grid-template-columns: 1fr; } 
+    .apresentacao-encontro { padding: 15px; } 
+    .formatos-encontro-container { gap: 10px; } 
+    .formato-encontro { padding: 8px; } 
+    .btn-audio-palavras-encontro { font-size: 1.3em; } 
+    .lista-palavras { font-size: 0.9em; }
+}

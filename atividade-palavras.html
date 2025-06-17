@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática: Palavras - Aprender Brincando</title>
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="atividade-palavras-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Open+Sans:wght@400;700&family=Playwrite+BR:wght@100..400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="img/logo-aprender-brincando.png" alt="Logo Aprender Brincando" class="logo">
+            <h1>Atividade Prática: Palavras</h1>
+        </div>
+    </header>
+
+    <main class="container pagina-atividade">
+        <section class="conteudo-atividade">
+            <h2 class="titulo-pagina-atividade">Hora de Brincar com as Palavras!</h2>
+
+            <article class="licao" id="licaoPalavras1">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 1: Qual é a Palavra Certa?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoPalavras1Titulo">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Olhe para a figura e clique na palavra que corresponde a ela. As palavras podem estar escritas de jeitos diferentes!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoPalavras1Enunciado">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="progresso-circular-container" id="progressoLicaoPalavras1">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoPalavras1" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoPalavras1" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoPalavras1">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoPalavras1" class="btn-refazer-licao btn-acao">Refazer Lição 1</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoPalavras1"></div>
+            </article>
+
+            <article class="licao" id="licaoPalavras2">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 2: Escute e Encontre</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoPalavras2Titulo">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Clique no botão para ouvir uma palavra e depois escolha a palavra escrita que você ouviu.</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoPalavras2Enunciado">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="progresso-circular-container" id="progressoLicaoPalavras2">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoPalavras2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoPalavras2" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoPalavras2">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoPalavras2" class="btn-refazer-licao btn-acao">Refazer Lição 2</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoPalavras2"></div>
+            </article>
+
+            <article class="licao" id="licaoPalavras3">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 3: Montando Palavras</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoPalavras3Titulo">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Use os pedacinhos (sílabas) disponíveis para formar palavras nos espaços. Tente formar 10 palavras que você conhece!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoPalavras3Enunciado">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                     <div class="progresso-circular-container" id="progressoLicaoPalavras3">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoPalavras3" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoPalavras3" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoPalavras3">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoPalavras3" class="btn-refazer-licao btn-acao">Refazer Lição 3</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoPalavras3"></div>
+            </article>
+
+            <article class="licao" id="licaoPalavras4">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 4: Decifre a Palavra Secreta</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoPalavras4Titulo">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Veja a figura de dica e coloque as letras embaralhadas em ordem para formar o nome dela!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoPalavras4Enunciado">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                     <div class="progresso-circular-container" id="progressoLicaoPalavras4">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoPalavras4" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoPalavras4" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoPalavras4">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoPalavras4" class="btn-refazer-licao btn-acao">Refazer Lição 4</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoPalavras4"></div>
+            </article>
+
+            <div class="navegacao-atividade">
+                <a href="palavras.html" class="btn-voltar btn-acao">Voltar para Teoria das Palavras</a>
+                <a href="trilha.html" class="btn-avancar btn-acao">Voltar para a Trilha</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aprender Brincando. Todos os direitos reservados.</p>
+    </footer>
+
+    <audio id="audioAcertou" src="audios/acertou.mp3" preload="auto"></audio>
+    <audio id="audioErrou" src="audios/errou.mp3" preload="auto"></audio>
+    <audio id="audioRefazerAtividade" src="audios/refazer-atividade.mp3" preload="auto"></audio>
+
+    <audio id="audioLicaoPalavras1Titulo" src="audios/licao_palavras1_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoPalavras1Enunciado" src="audios/licao_palavras1_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoPalavras2Titulo" src="audios/licao_palavras2_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoPalavras2Enunciado" src="audios/licao_palavras2_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoPalavras3Titulo" src="audios/licao_palavras3_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoPalavras3Enunciado" src="audios/licao_palavras3_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoPalavras4Titulo" src="audios/licao_palavras4_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoPalavras4Enunciado" src="audios/licao_palavras4_enunciado.mp3" preload="auto"></audio>
+    
+    <audio id="audioFiguraBolaL1P" src="audios/figura_bola_l1p.mp3" preload="auto"></audio>
+    <audio id="audioPalavraCasaL2P" src="audios/palavra_casa_l2p.mp3" preload="auto"></audio>
+    <audio id="audioPalavraMacaL4P" src="audios/palavra_maca_l4p.mp3" preload="auto"></audio>
+    <audio id="audioSilabaBA" src="audios/silaba_ba.mp3" preload="auto"></audio>
+    <audio id="audioSilabaCA" src="audios/silaba_ca.mp3" preload="auto"></audio>
+    
+    <script src="global-script.js"></script>
+    <script src="atividade-palavras-script.js"></script>
+</body>
+</html>

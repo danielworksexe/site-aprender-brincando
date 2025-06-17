@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprender Brincando - Alfabetização Divertida</title>
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="img/logo-aprender-brincando.png" alt="Logo Aprender Brincando" class="logo">
+            <h1>Bem-vindo ao Aprender Brincando!</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="apresentacao">
+            <div class="carrossel-container">
+                <div class="carrossel-slides">
+                    <div class="slide fade">
+                        <img src="img/criancas-lendo-01.png" alt="Crianças lendo - Imagem 1">
+                        <div class="legenda-slide">Sala de aula colorida e iluminada</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="img/criancas-lendo-02.png" alt="Crianças lendo - Imagem 2">
+                        <div class="legenda-slide">Aprendizagem divertida com orientação</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="img/criancas-lendo-03.png" alt="Crianças lendo - Imagem 3">
+                        <div class="legenda-slide">Brincando com as letras</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:10px;">
+                <span class="indicador" onclick="mostrarSlideAtual(1)"></span>
+                <span class="indicador" onclick="mostrarSlideAtual(2)"></span>
+                <span class="indicador" onclick="mostrarSlideAtual(3)"></span>
+            </div>
+
+            <h2>O que é o Aprender Brincando?</h2>
+            <p>O "Aprender Brincando" é um cantinho especial na internet criado com muito carinho para ajudar as crianças a darem os primeiros passos no mundo mágico da leitura e da escrita. Acreditamos que aprender pode e deve ser uma aventura divertida e cheia de descobertas!</p>
+
+            <h2>Como podemos ajudar?</h2>
+            <p>Nosso projeto foi pensado para guiar os pequenos exploradores através de uma trilha de aprendizagem lúdica e interativa. Com atividades coloridas, jogos educativos e personagens amigáveis, transformamos o desafio de aprender as letras, sílabas e palavras em uma brincadeira estimulante.</p>
+            <p>Aqui, cada etapa é uma nova conquista, celebrada com alegria. Queremos que as crianças se sintam confiantes e motivadas a desvendar os segredos do alfabeto, construindo uma base sólida para um futuro brilhante e cheio de conhecimento.</p>
+            <p>Prepare-se para uma jornada incrível onde aprender a ler e escrever será uma grande diversão!</p>
+
+            <a href="trilha.html" class="btn-comecar">Vamos Começar!</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aprender Brincando. Todos os direitos reservados.</p>
+    </footer>
+
+    <audio id="audioRecepcao" src="audios/recepcao.mp3" preload="auto"></audio>
+    <audio id="audioVamosComecar" src="audios/vamos-comecar.mp3" preload="auto"></audio>
+
+    <script src="global-script.js"></script>
+    <script src="index-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* ============================================= */
+/* === PÁGINA PALAVRAS (palavras.html) === */
+/* ============================================= */
+
+.pagina-etapa .conteudo-etapa {
+    padding: 20px;
+    text-align: center;
+}
+.pagina-etapa > .conteudo-etapa > h2 {
+    color: #FF6B6B;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+.pagina-etapa .instrucao-etapa {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.subtitulo-secao-palavras {
+    font-size: 1.8em;
+    color: #4CAF50;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Seção de Explicação do Método */
+.explicacao-metodo-container {
+    background-color: #f1f8e9;
+    border-left: 5px solid #8BC34A;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    text-align: left;
+}
+.explicacao-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.explicacao-header .subtitulo-secao-palavras {
+    margin: 0;
+    border: none;
+    padding: 0;
+    font-size: 1.6em;
+}
+.btn-audio-auxiliar {
+    background: none; border: none; font-size: 1.3em;
+    color: #8BC34A; cursor: pointer; transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+.btn-audio-auxiliar:hover { transform: scale(1.1); }
+.explicacao-header .btn-audio-auxiliar {
+    color: #4CAF50; font-size: 1.4em;
+}
+.paragrafo-com-audio {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.paragrafo-com-audio p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #333;
+    flex-grow: 1;
+    margin: 0;
+}
+
+/* Grid das Palavras de Exemplo */
+.palavras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+.palavra-exemplo-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden; /* Garante que nada ultrapasse as bordas do card */
+}
+.fonetico-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    font-style: italic;
+    color: #777;
+    font-size: 1.1em;
+    flex-wrap: wrap;
+}
+.btn-audio-fonetico {
+    background: none; border: none; font-size: 1.2em;
+    color: #f39c12; cursor: pointer; flex-shrink: 0;
+}
+
+.palavra-principal-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    line-height: 1; /* Ajuda no controle de altura */
+}
+
+/* Estilos de fonte base para sílabas */
+.palavra-silaba-bastao {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 3.8em; /* Tamanho padrão para palavras de 1-2 sílabas */
+    text-transform: uppercase;
+}
+.palavra-silaba-cursiva {
+    font-family: 'Playwrite BR', cursive;
+    font-size: 4.5em; /* Tamanho padrão para palavras de 1-2 sílabas */
+    text-transform: lowercase;
+    position: relative;
+    top: 0.1em;
+}
+.hifen-palavra {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: #ccc;
+    align-self: center;
+    margin: 0 3px;
+    font-size: 2.8em;
+}
+
+/* CONDIÇÕES ESPECIAIS PARA PALAVRAS LONGAS */
+/* Para palavras com 3 sílabas */
+.palavra-media .palavra-silaba-bastao { font-size: 3em; }
+.palavra-media .palavra-silaba-cursiva { font-size: 3.5em; }
+.palavra-media .hifen-palavra { font-size: 2.2em; }
+
+/* Para palavras com 4 ou mais sílabas */
+.palavra-longa .palavra-silaba-bastao { font-size: 2.4em; }
+.palavra-longa .palavra-silaba-cursiva { font-size: 2.8em; }
+.palavra-longa .hifen-palavra { font-size: 1.8em; }
+
+.btn-audio-palavra {
+    background: none; border: none; font-size: 2rem;
+    color: #3498db; cursor: pointer; margin-left: 15px;
+    align-self: center;
+}
+
+/* Cores para as Sílabas */
+.cor-bola { color: #3498db; } .cor-lata { color: #95a5a6; } .cor-gato { color: #e67e22; } 
+.cor-tatu { color: #8d6e63; } .cor-casa { color: #e74c3c; } .cor-foca { color: #2980b9; } 
+.cor-dado { color: #2ecc71; } .cor-dedo { color: #f06292; } .cor-macaco { color: #a1887f; } 
+.cor-sapo { color: #27ae60; } .cor-pote { color: #d35400; } .cor-abacaxi { color: #f1c40f; } 
+.cor-jaca { color: #16a085; } .cor-navio { color: #34495e; } .cor-chave { color: #f39c12; } 
+.cor-ninho { color: #af601a; } .cor-palha { color: #f5d76e; } .cor-guerra { color: #7f8c8d; } 
+.cor-carro { color: #c0392b; } .cor-porta { color: #795548; } .cor-festa { color: #8e44ad; } 
+.cor-anel { color: #bdc3c7; } .cor-bomba { color: #2c3e50; } .cor-pente { color: #1abc9c; } 
+.cor-pao { color: #d0b49f; } .cor-placa { color: #f1c40f; } .cor-prato { color: #7f8c8d; } 
+.cor-trator { color: #e67e22; } .cor-barco { color: #34495e; } .cor-vela { color: #f7dc6f; } 
+.cor-blusa { color: #5dade2; }
+
+.navegacao-etapa {
+    margin-top: 40px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+}
+
+/* === RESPONSIVIDADE PALAVRAS === */
+@media (max-width: 768px) {
+    .palavras-grid { grid-template-columns: 1fr; }
+    /* Tamanhos base para telas menores */
+    .palavra-silaba-bastao { font-size: 3.2em; }
+    .palavra-silaba-cursiva { font-size: 3.8em; }
+    .hifen-palavra { font-size: 2.4em; }
+    /* Ajuste para palavras longas em telas menores */
+    .palavra-media .palavra-silaba-bastao { font-size: 2.5em; }
+    .palavra-media .palavra-silaba-cursiva { font-size: 3em; }
+    .palavra-media .hifen-palavra { font-size: 1.8em; }
+    .palavra-longa .palavra-silaba-bastao { font-size: 2em; }
+    .palavra-longa .palavra-silaba-cursiva { font-size: 2.4em; }
+    .palavra-longa .hifen-palavra { font-size: 1.5em; }
+}
+
+@media (max-width: 480px) {
+    .palavra-silaba-bastao { font-size: 2.8em; }
+    .palavra-silaba-cursiva { font-size: 3.2em; }
+    .hifen-palavra { font-size: 2em; }
+    .fonetico-display { font-size: 0.9em; }
+    .palavra-principal-display { min-height: 60px; }
+
+    /* Ajuste para palavras longas em telas pequenas */
+    .palavra-media .palavra-silaba-bastao { font-size: 2.2em; }
+    .palavra-media .palavra-silaba-cursiva { font-size: 2.6em; }
+    .palavra-media .hifen-palavra { font-size: 1.6em; }
+    .palavra-longa .palavra-silaba-bastao { font-size: 1.8em; }
+    .palavra-longa .palavra-silaba-cursiva { font-size: 2.2em; }
+    .palavra-longa .hifen-palavra { font-size: 1.4em; }
+
+    .navegacao-etapa .btn-acao { width: 100%; margin-bottom: 10px; max-width: 100%; }
+}

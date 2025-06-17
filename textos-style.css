@@ -1,0 +1,157 @@
+/* ============================================= */
+/* === PÁGINA TEXTOS (textos.html) === */
+/* ============================================= */
+
+/* Estilos gerais da página de etapa */
+.pagina-etapa .conteudo-etapa {
+    padding: 20px;
+    text-align: center;
+}
+
+.pagina-etapa > .conteudo-etapa > h2 {
+    color: #FF6B6B;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.pagina-etapa .instrucao-etapa {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 35px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo dos contêineres de cada explicação */
+.explicacao-container-texto {
+    background-color: #fcfcfc;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.explicacao-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid;
+    padding-bottom: 15px;
+}
+
+.subtitulo-secao-texto {
+    font-size: 1.8em;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Cores e estilos para cada seção */
+#licaoTextos1 .explicacao-header { border-color: #3498db; }
+#licaoTextos1 .subtitulo-secao-texto { color: #2980b9; }
+
+#licaoTextos2 .explicacao-header { border-color: #e67e22; }
+#licaoTextos2 .subtitulo-secao-texto { color: #d35400; }
+
+#licaoTextos3 .explicacao-header { border-color: #9b59b6; }
+#licaoTextos3 .subtitulo-secao-texto { color: #8e44ad; }
+
+#licaoTextos4 .explicacao-header { border-color: #2ecc71; }
+#licaoTextos4 .subtitulo-secao-texto { color: #27ae60; }
+
+
+.explicacao-header .btn-audio-auxiliar {
+    font-size: 1.5em;
+    color: #a0a0a0;
+}
+
+.explicacao-conteudo p, .explicacao-conteudo ul {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.explicacao-conteudo ul {
+    list-style-type: '✔ ';
+    padding-left: 30px;
+}
+
+.explicacao-conteudo ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para os blocos de texto de exemplo */
+.texto-exemplo {
+    background-color: #fff9e6;
+    border-left: 5px solid #ffc107;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2em;
+    line-height: 1.7;
+    font-style: italic;
+    color: #584100;
+}
+
+/* Estilo para os blocos de análise e dicas */
+.analise-texto {
+    background-color: #f0f8ff;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.analise-texto p strong {
+    color: #3498db;
+}
+
+.analise-texto ul {
+    list-style-type: '🔍 ';
+}
+
+/* Estilos específicos para a estrutura de produção de texto */
+.estrutura-texto p {
+    font-size: 1.1em;
+}
+.estrutura-texto hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+.texto-exemplo-estrutura {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-style: italic;
+    color: #555;
+    margin-top: 5px !important; /* Sobrescreve a margem padrão */
+}
+
+/* Navegação da Etapa */
+.navegacao-etapa {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+    .subtitulo-secao-texto { font-size: 1.6em; }
+    .explicacao-conteudo p, .explicacao-conteudo ul { font-size: 1.1em; }
+    .texto-exemplo { font-size: 1.1em; }
+}
+
+@media (max-width: 480px) {
+    .explicacao-container-texto { padding: 15px; }
+    .explicacao-header { flex-direction: column; align-items: flex-start; }
+    .subtitulo-secao-texto { font-size: 1.4em; }
+    .navegacao-etapa .btn-acao { width: 100%; max-width: 100%; margin-bottom: 10px; }
+}

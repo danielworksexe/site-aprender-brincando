@@ -1,0 +1,247 @@
+/* ============================================= */
+/* === PÁGINA ALFABETO (alfabeto.html) === */
+/* ============================================= */
+
+/* Estilos gerais da página de etapa (já podem existir no global-style.css ou vogais-style.css) */
+.pagina-etapa .conteudo-etapa {
+    padding: 20px;
+    text-align: center; /* Centraliza o título principal da página */
+}
+
+.pagina-etapa > .conteudo-etapa > h2 {
+    color: #FF6B6B; /* Cor principal para o título da página */
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.pagina-etapa .instrucao-etapa {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid para apresentar as letras do alfabeto */
+.alfabeto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas */
+    gap: 25px; /* Espaçamento entre os cards das letras */
+    margin-top: 20px;
+}
+
+.apresentacao-letra-alfabeto {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo do card */
+    gap: 15px; /* Espaço entre os elementos dentro do card */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.apresentacao-letra-alfabeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.letra-principal-display-alfabeto {
+    font-family: 'Nunito', sans-serif; /* Fonte mais robusta para a letra principal */
+    font-size: 4.5em; /* Tamanho grande para a letra principal (ex: Aa) */
+    color: #FF6B6B; /* Cor principal */
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px; /* Pequeno espaço abaixo da letra principal */
+}
+
+.btn-audio-letra-alfabeto,
+.btn-audio-palavras-alfabeto {
+    background: none;
+    border: none;
+    font-size: 1.8em; /* Tamanho do ícone de áudio */
+    color: #FFC107; /* Amarelo */
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-audio-letra-alfabeto:hover,
+.btn-audio-palavras-alfabeto:hover {
+    color: #FFA000; /* Amarelo mais escuro */
+    transform: scale(1.15);
+}
+.btn-audio-letra-alfabeto.audio-tocando, /* Classe adicionada pelo JS global */
+.btn-audio-palavras-alfabeto.audio-tocando {
+    color: #77DD77; /* Verde quando tocando */
+}
+
+
+.formatos-letra-alfabeto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas para os formatos */
+    gap: 10px; /* Espaço entre os formatos */
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px dashed #eee;
+    border-bottom: 1px dashed #eee;
+    margin-top: 10px;
+}
+
+.formatos-letra-alfabeto div {
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.formato-nome {
+    font-weight: normal;
+    color: #666;
+    display: block; /* Nome do formato em uma linha */
+    margin-bottom: 3px;
+    font-size: 0.85em;
+}
+
+.letra-formato {
+    /* As classes específicas de fonte (letra-opcao-*) do global-style.css serão aplicadas aqui */
+    /* Ajustes de tamanho específicos para esta página podem ser feitos aqui se necessário */
+    display: inline-block; /* Para que o span não ocupe a linha toda */
+}
+/* Exemplo de ajuste se as fontes globais forem muito grandes/pequenas neste contexto */
+.letra-formato.letra-opcao-bastao-upper,
+.letra-formato.letra-opcao-imprensa-lower {
+    font-size: 1.8em !important; /* Ajuste de exemplo */
+}
+.letra-formato.letra-opcao-cursiva-upper,
+.letra-formato.letra-opcao-cursiva-lower {
+    font-size: 2.2em !important; /* Ajuste de exemplo para cursivas */
+    line-height: 1 !important;
+}
+
+
+.exemplos-palavras-alfabeto {
+    width: 100%;
+    text-align: center; /* Centraliza o parágrafo e o botão */
+}
+
+.exemplos-palavras-alfabeto p {
+    font-size: 1.05em;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.exemplos-palavras-alfabeto p strong {
+    color: #FF6B6B; /* Destaca a letra inicial nos exemplos */
+    font-size: 1.1em;
+}
+
+.btn-audio-palavras-alfabeto {
+    font-size: 1.6em; /* Ligeiramente menor que o da letra principal */
+    color: #007bff; /* Azul para diferenciar */
+}
+.btn-audio-palavras-alfabeto:hover {
+    color: #0056b3;
+}
+.btn-audio-palavras-alfabeto.audio-tocando {
+    color: #28a745;
+}
+
+
+/* Navegação da Etapa (Voltar/Avançar) */
+.navegacao-etapa {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/* Estilos para .btn-acao, .btn-voltar, .btn-avancar já estão no global-style.css */
+
+
+/* ============================================= */
+/* === RESPONSIVIDADE ALFABETO === */
+/* ============================================= */
+@media (max-width: 768px) {
+    .alfabeto-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    .apresentacao-letra-alfabeto {
+        padding: 15px;
+        gap: 12px;
+    }
+    .letra-principal-display-alfabeto {
+        font-size: 3.8em;
+    }
+    .btn-audio-letra-alfabeto {
+        font-size: 1.7em;
+    }
+    .formatos-letra-alfabeto {
+        gap: 8px;
+    }
+    .formatos-letra-alfabeto div {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+    .letra-formato.letra-opcao-bastao-upper,
+    .letra-formato.letra-opcao-imprensa-lower {
+        font-size: 1.6em !important;
+    }
+    .letra-formato.letra-opcao-cursiva-upper,
+    .letra-formato.letra-opcao-cursiva-lower {
+        font-size: 2em !important;
+    }
+    .exemplos-palavras-alfabeto p {
+        font-size: 1em;
+    }
+    .btn-audio-palavras-alfabeto {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-etapa > .conteudo-etapa > h2 { font-size: 1.8em; }
+    .pagina-etapa .instrucao-etapa { font-size: 1em; margin-bottom: 20px; }
+    .alfabeto-grid {
+        grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
+        gap: 15px;
+    }
+    .letra-principal-display-alfabeto {
+        font-size: 3.5em;
+    }
+    .btn-audio-letra-alfabeto {
+        font-size: 1.6em;
+    }
+    .formatos-letra-alfabeto {
+        grid-template-columns: 1fr; /* Formatos empilhados */
+    }
+    .letra-formato.letra-opcao-bastao-upper,
+    .letra-formato.letra-opcao-imprensa-lower {
+        font-size: 1.5em !important;
+    }
+    .letra-formato.letra-opcao-cursiva-upper,
+    .letra-formato.letra-opcao-cursiva-lower {
+        font-size: 1.9em !important;
+    }
+    .exemplos-palavras-alfabeto p {
+        font-size: 0.95em;
+    }
+    .btn-audio-palavras-alfabeto {
+        font-size: 1.4em;
+    }
+    .navegacao-etapa .btn-acao {
+        width: 100%;
+        margin-bottom: 10px;
+        max-width: 100%; /* Ocupa toda a largura */
+    }
+    .navegacao-etapa .btn-acao:last-child {
+        margin-bottom: 0;
+    }
+}

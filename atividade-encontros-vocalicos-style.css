@@ -1,0 +1,534 @@
+/* ================================================================= */
+/* === PÁGINA DE ATIVIDADE PRÁTICA: ENCONTROS VOCÁLICOS === */
+/* ================================================================= */
+
+/* Estilos gerais para o container de conteúdo da página de atividade */
+.pagina-atividade .conteudo-atividade {
+    padding: 20px;
+}
+
+.titulo-pagina-atividade {
+    color: #FF6B6B; /* Vermelho Principal */
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Estilos para cada Lição */
+.licao {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.licao.licacao-bloqueada {
+    background-color: #f8f8f8;
+    opacity: 0.7;
+}
+.licao.licacao-bloqueada p {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    padding: 20px 0;
+}
+
+.licao-header,
+.licao-enunciado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.titulo-licao {
+    font-size: 1.7em;
+    color: #4A4A4A;
+    margin: 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.licao-enunciado p {
+    font-size: 1.15em;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.btn-audio-auxiliar {
+    background: none;
+    border: none;
+    font-size: 1.6em;
+    color: #FFC107; /* Amarelo */
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+.btn-audio-auxiliar:hover {
+    color: #FFA000; /* Amarelo mais escuro */
+    transform: scale(1.1);
+}
+.btn-audio-auxiliar.audio-tocando {
+    color: #77DD77; /* Verde */
+}
+.btn-audio-auxiliar:disabled {
+    color: #ccc;
+    cursor: default;
+    transform: none;
+}
+
+/* Progresso Circular da Lição */
+.licao-feedback-progresso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding: 10px 0;
+}
+
+.info-ajuda { }
+
+.btn-ajuda-progresso {
+    background-color: #FFC107;
+    color: #424242;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-ajuda-progresso:hover {
+    background-color: #FFA000;
+}
+
+.progresso-circular-container {
+    text-align: center;
+}
+
+.progresso-circular {
+    display: block;
+    margin: 0 auto 5px auto;
+    transform: rotate(-90deg);
+}
+
+.progresso-circular-fundo {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 3.8;
+}
+
+.progresso-circular-barra {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.3s ease-out, stroke 0.3s ease-out;
+}
+.progresso-circular-barra.cor-acerto { stroke: #77DD77 !important; }
+.progresso-circular-barra.cor-erro { stroke: #FF6B6B !important; }
+
+.progresso-circular-texto {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.6em;
+    font-weight: bold;
+    fill: #555;
+    text-anchor: middle;
+    transform: rotate(90deg) translate(0, -33px);
+}
+
+.legenda-progresso {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 0;
+}
+
+/* Área de desafios genérica para as lições */
+.area-desafios-licao {
+    padding: 15px;
+    background-color: #f0f8ff;
+    border: 1px dashed #add8e6;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.area-desafios-licao p em {
+    color: #888;
+    font-style: italic;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* --- LIÇÃO 1 EV --- */
+#areaDesafiosLicaoEV1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.palavra-ev-item-licao1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+    width: calc(33.333% - 20px);
+    min-width: 140px;
+    box-sizing: border-box;
+}
+.palavra-ev-display-licao1 {
+    font-size: 1.7em;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #d1d1d1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s, color 0.2s;
+    text-align: center;
+    user-select: none;
+    width: 100%;
+    line-height: 1.3;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.palavra-ev-display-licao1:not([data-respondida="true"]):not(.desabilitada-apos-conclusao):hover {
+    background-color: #e9f5ff;
+    border-color: #a6d5fa;
+    transform: translateY(-1px);
+}
+.palavra-ev-display-licao1.correta {
+    background-color: #d4edda !important;
+    color: #155724 !important;
+    border-color: #c3e6cb !important;
+    cursor: default;
+}
+.palavra-ev-display-licao1.correta .encontro-destacado-ev { font-weight: bolder; }
+.palavra-ev-display-licao1.errada {
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+    border-color: #f5c6cb !important;
+    cursor: default;
+    animation: shake 0.5s;
+}
+.palavra-ev-display-licao1.desabilitada-apos-conclusao {
+    opacity: 0.6; cursor: not-allowed; pointer-events: none;
+    background-color: #f0f0f0; border-color: #dcdcdc;
+}
+.btn-audio-palavra-ev1 {
+    background: none; border: none; font-size: 1.3em;
+    color: #007bff; cursor: pointer; padding: 3px; line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.btn-audio-palavra-ev1:hover { color: #0056b3; transform: scale(1.1); }
+.btn-audio-palavra-ev1.audio-tocando { color: #28a745; }
+
+/* --- LIÇÃO 2 EV: Detetive dos Encontros --- */
+.desafio-item-licaoev2 {
+    background-color: #fff; border: 1px solid #e9e9e9; border-radius: 8px;
+    padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+}
+.btn-audio-palavra-licaoev2 {
+    background-color: #5dade2; color: white; border: none;
+    padding: 10px 20px; font-size: 1.1em; font-weight: bold;
+    border-radius: 25px; cursor: pointer; transition: background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 8px;
+}
+.btn-audio-palavra-licaoev2:hover { background-color: #3498db; }
+.btn-audio-palavra-licaoev2.audio-tocando { background-color: #2ecc71; }
+.opcoes-container-licaoev2 {
+    display: flex; justify-content: center; align-items: stretch;
+    flex-wrap: wrap; gap: 15px; width: 100%;
+}
+.opcao-wrapper-licaoev2 {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    flex-basis: calc(33.333% - 20px); min-width: 130px; box-sizing: border-box;
+}
+.opcao-encontro-licaoev2 {
+    font-size: 1.8em; font-weight: bold; padding: 15px 20px;
+    border: 2px solid #b0bec5; border-radius: 8px; cursor: pointer;
+    text-align: center; background-color: #eceff1; color: #37474f;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+    user-select: none; width: 100%; line-height: 1.2; min-height: 50px;
+    display: flex; align-items: center; justify-content: center;
+}
+.opcao-encontro-licaoev2:not(.desabilitada):hover {
+    background-color: #cfd8dc; border-color: #90a4ae; transform: translateY(-2px);
+}
+.opcao-encontro-licaoev2.correta {
+    background-color: #a5d6a7 !important; color: #1b5e20 !important; border-color: #81c784 !important;
+}
+.opcao-encontro-licaoev2.errada {
+    background-color: #ef9a9a !important; color: #c62828 !important; border-color: #e57373 !important; animation: shake 0.4s;
+}
+.opcao-encontro-licaoev2.correta-nao-escolhida {
+    background-color: #fff59d !important; color: #f9a825 !important; border-color: #ffee58 !important;
+    box-shadow: 0 0 6px rgba(255, 238, 88, 0.7);
+}
+.opcao-encontro-licaoev2.desabilitada {
+    opacity: 0.6; cursor: not-allowed; pointer-events: none;
+}
+.btn-audio-opcao-ev2 {
+    background: none; border: 1px solid #cfd8dc; font-size: 1.1em;
+    color: #546e7a; cursor: pointer; padding: 5px 7px;
+    border-radius: 50%; line-height: 1;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+.btn-audio-opcao-ev2:hover { background-color: #eceff1; transform: scale(1.1); }
+.btn-audio-opcao-ev2.audio-tocando { background-color: #a5d6a7; color: #1b5e20; }
+
+/* === LIÇÃO 3 EV: Qual Encontro Você Ouve? === */
+.desafio-item-licaoev3 {
+    background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px;
+    padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+}
+.btn-audio-principal-ev3 {
+    background-color: #76d7c4; /* Verde água */
+    color: white; border: none; padding: 12px 25px; font-size: 1.2em;
+    font-weight: bold; border-radius: 25px; cursor: pointer;
+    transition: background-color 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex; align-items: center; gap: 8px;
+}
+.btn-audio-principal-ev3:hover { background-color: #48c9b0; } 
+.btn-audio-principal-ev3.audio-tocando { background-color: #f7dc6f; color: #7d6608; } 
+.opcoes-container-licaoev3 {
+    display: flex; justify-content: center; align-items: stretch;
+    flex-wrap: wrap; gap: 15px; width: 100%; margin-top: 10px;
+}
+.opcao-wrapper-licaoev3 { 
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    flex-basis: calc(33.333% - 20px); min-width: 120px; box-sizing: border-box;
+}
+.opcao-escrita-ev3 { 
+    font-size: 1.8em; font-weight: bold; padding: 15px 20px;
+    border: 2px solid #aeb6bf; border-radius: 8px; cursor: pointer;
+    text-align: center; background-color: #f4f6f7; color: #2c3e50;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+    user-select: none; width: 100%; line-height: 1.2; min-height: 50px;
+    display: flex; align-items: center; justify-content: center;
+}
+.opcao-escrita-ev3:not(.desabilitada):hover {
+    background-color: #e5e7e9; border-color: #808b96; transform: translateY(-2px);
+}
+.opcao-escrita-ev3.correta {
+    background-color: #a9dfbf !important; color: #145a32 !important; border-color: #7dcea0 !important;
+}
+.opcao-escrita-ev3.errada {
+    background-color: #f5b7b1 !important; color: #922b21 !important; border-color: #f1948a !important; animation: shake 0.4s;
+}
+.opcao-escrita-ev3.correta-nao-escolhida {
+    background-color: #fad7a0 !important; color: #af601a !important; border-color: #f8c471 !important;
+    box-shadow: 0 0 6px rgba(248, 196, 113, 0.7);
+}
+.opcao-escrita-ev3.desabilitada {
+    opacity: 0.6; cursor: not-allowed; pointer-events: none;
+}
+.btn-audio-opcao-ev3 { 
+    background: none; border: 1px solid #d5dbdb; font-size: 1.1em;
+    color: #5d6d7e; cursor: pointer; padding: 5px 7px;
+    border-radius: 50%; line-height: 1;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+.btn-audio-opcao-ev3:hover { background-color: #f2f3f4; transform: scale(1.1); }
+.btn-audio-opcao-ev3.audio-tocando { background-color: #a9dfbf; color: #145a32; }
+
+/* === LIÇÃO 4 EV: Classifique o Encontro! === */
+.desafio-item-licaoev4 {
+    background-color: #fff; border: 1px solid #d5d8dc; border-radius: 8px;
+    padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+}
+.palavra-container-licaoev4 {
+    display: flex; align-items: center; justify-content: center; gap: 15px;
+    padding: 10px; background-color: #fdfefe; border-radius: 6px; width: auto;
+    border: 1px solid #f2f2f2; margin-bottom: 10px;
+}
+.palavra-display-licaoev4 { 
+    font-size: 2.2em; font-weight: bold; color: #34495e;
+}
+.btn-audio-palavra-licaoev4 { 
+    background: none; border: none; font-size: 1.6em;
+    color: #5dade2; cursor: pointer; padding: 5px; line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+.btn-audio-palavra-licaoev4:hover { color: #3498db; transform: scale(1.15); }
+.btn-audio-palavra-licaoev4.audio-tocando { color: #2ecc71; }
+
+.btns-classificacao-container-ev4 { 
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; width: 100%;
+}
+.wrapper-btn-classificacao-ev4 { /* Novo wrapper para botão de classificação + seu áudio */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o botão de classificação e seu áudio */
+    flex-basis: calc(33.333% - 15px); /* Tenta colocar 3 por linha */
+    min-width: 150px; /* Ajuste conforme necessário */
+    justify-content: center; /* Centraliza se houver espaço extra */
+}
+.btn-classificacao-ev4 {
+    background-color: #85c1e9; 
+    color: white; border: none; padding: 12px 18px; font-size: 1.1em;
+    font-weight: bold; border-radius: 20px; cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s; 
+    flex-grow: 1; /* Botão de texto ocupa o espaço disponível no wrapper */
+    text-align: center;
+}
+.btn-classificacao-ev4:not(.desabilitada):hover {
+    background-color: #5dade2; transform: translateY(-2px);
+}
+.btn-audio-tipo-ev4 { /* Botão de áudio para "Ditongo", "Tritongo", "Hiato" */
+    background: none; border: 1px solid #adb5bd; font-size: 1em;
+    color: #495057; cursor: pointer; padding: 6px 8px;
+    border-radius: 50%; line-height: 1; flex-shrink: 0;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+.btn-audio-tipo-ev4:hover { background-color: #e9ecef; transform: scale(1.1); }
+.btn-audio-tipo-ev4.audio-tocando { background-color: #7dcea0; color: #145a32;}
+
+.btn-classificacao-ev4.correta,
+.btn-audio-tipo-ev4.correta { /* Se precisar estilizar o botão de áudio junto */
+    background-color: #7dcea0 !important; 
+}
+.btn-classificacao-ev4.errada,
+.btn-audio-tipo-ev4.errada {
+    background-color: #ec7063 !important; 
+    animation: shake 0.4s;
+}
+.btn-classificacao-ev4.correta-nao-escolhida {
+    background-color: #f7dc6f !important; 
+    color: #7d6608 !important;
+    box-shadow: 0 0 5px #f7dc6f;
+}
+.btn-classificacao-ev4.desabilitada,
+.btn-audio-tipo-ev4.desabilitada { /* Para desabilitar o botão de áudio também */
+    opacity: 0.6; cursor: not-allowed; pointer-events: none;
+}
+
+
+/* Botão Refazer Lição (estilo geral) */
+.btn-refazer-licao.btn-acao {
+    background-color: #FFC107; color: #424242; border-color: #FBC02D;
+    margin-top: 0; width: auto;
+}
+.btn-refazer-licao.btn-acao:hover { background-color: #FFA000; border-color: #F9A825; }
+
+.navegacao-atividade {
+    margin-top: 40px; display: flex; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap;
+}
+.navegacao-atividade .btn-acao { flex-grow: 1; max-width: calc(50% - 10px); }
+
+
+/* =============================================================== */
+/* === RESPONSIVIDADE (Específica para Página de Atividade Encontros Vocálicos) === */
+/* =============================================================== */
+@media (max-width: 768px) {
+    .titulo-pagina-atividade { font-size: 1.8em; }
+    .titulo-licao { font-size: 1.5em; }
+    .licao-enunciado p { font-size: 1em; }
+    .btn-audio-auxiliar { font-size: 1.4em; }
+    .progresso-circular { width: 75px; height: 75px; }
+    .progresso-circular-texto { font-size: 0.45em; transform: rotate(90deg) translate(0, -24px); }
+
+    .palavra-ev-item-licao1 { width: calc(50% - 15px); }
+    .palavra-ev-display-licao1 { font-size: 1.5em; }
+    .btn-audio-palavra-ev1 { font-size: 1.2em; }
+
+    /* Lição 2, 3 EV Responsivo */
+    .btn-audio-palavra-licaoev2, .btn-audio-principal-ev3 { font-size: 1em; padding: 8px 12px; }
+    .opcoes-container-licaoev2, .opcoes-container-licaoev3 {
+        flex-direction: column; align-items: center;
+    }
+    .opcao-wrapper-licaoev2, .opcao-wrapper-licaoev3 {
+        flex-basis: 100%; max-width: 320px; /* Aumentado um pouco para acomodar melhor */
+        flex-direction: row; align-items: center; gap: 10px; width: 100%;
+    }
+    .opcao-encontro-licaoev2, .opcao-escrita-ev3 {
+        font-size: 1.6em; padding: 10px 15px; flex-grow: 1;
+    }
+    .btn-audio-opcao-ev2, .btn-audio-opcao-ev3 {
+        font-size: 1.1em; padding: 5px 7px; flex-shrink: 0;
+    }
+    
+    /* Lição 4 EV Responsivo */
+    .palavra-display-licaoev4 { font-size: 1.8em; }
+    .btn-audio-palavra-licaoev4 { font-size: 1.4em; }
+    .btns-classificacao-container-ev4 { flex-direction: column; align-items: center; }
+    .wrapper-btn-classificacao-ev4 { /* Botão de classificação e seu áudio */
+        width: 80%; max-width: 300px; flex-basis: auto;
+        flex-direction: row; justify-content: center;
+    }
+    .btn-classificacao-ev4 { 
+        font-size: 1em; padding: 10px 15px; flex-grow: 0; min-width: 100px; /* Não cresce tanto */
+    }
+    .btn-audio-tipo-ev4 {
+        font-size: 0.9em; padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-pagina-atividade { font-size: 1.6em; }
+    .licao { padding: 15px 20px; }
+    .titulo-licao { font-size: 1.4em; }
+    .licao-enunciado { flex-direction: column; align-items: flex-start; gap: 5px; }
+    .btn-audio-auxiliar { align-self: flex-start; margin-top: 3px; font-size: 1.2em;}
+    .licao-feedback-progresso { flex-direction: column; gap: 15px; align-items: center;}
+    .progresso-circular { width: 65px; height: 65px; }
+    .progresso-circular-texto { font-size: 0.4em; transform: rotate(90deg) translate(0, -21px); }
+
+    #areaDesafiosLicaoEV1 { gap: 10px; }
+    .palavra-ev-item-licao1 { width: 100%; padding: 10px; }
+    .palavra-ev-display-licao1 { font-size: 1.4em; padding: 8px 10px; }
+    .btn-audio-palavra-ev1 { font-size: 1.1em; }
+    .navegacao-atividade .btn-acao { max-width: 100%; }
+
+    /* Lição 2, 3, 4 EV Responsivo Telas Pequenas */
+    .desafio-item-licaoev2, .desafio-item-licaoev3, .desafio-item-licaoev4 {
+        padding: 15px 10px;
+    }
+    .btn-audio-palavra-licaoev2, .btn-audio-principal-ev3 {
+        width: 90%; text-align: center; justify-content: center;
+    }
+    .opcao-wrapper-licaoev2, .opcao-wrapper-licaoev3 {
+        max-width: 100%; padding: 5px 0;
+    }
+    .opcao-encontro-licaoev2, .opcao-escrita-ev3 { font-size: 1.5em; }
+    .btn-audio-opcao-ev2, .btn-audio-opcao-ev3 { font-size: 1em; }
+
+    .palavra-container-licaoev4 { flex-direction: column; gap: 10px; }
+    .palavra-display-licaoev4 { font-size: 1.7em; }
+    .wrapper-btn-classificacao-ev4 { /* Botão de classificação e seu áudio */
+        width: 90%; max-width: none;
+    }
+    .btn-classificacao-ev4 {
+        flex-grow: 1; /* Permite que o botão de texto cresça */
+    }
+}
+
+/* Herança de animação e classes de fonte do global-style.css */
+@keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-3px);} 75% {transform: translateX(3px);} }
+/* As classes .letra-opcao-* são definidas em global-style.css */

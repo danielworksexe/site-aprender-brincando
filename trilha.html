@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de Aprendizagem - Aprender Brincando</title>
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="trilha-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="img/logo-aprender-brincando.png" alt="Logo Aprender Brincando" class="logo">
+            <h1>Trilha de Aprendizagem</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="trilha-aprendizagem">
+            <div class="header-trilha">
+                <h2>Siga os passos para uma aventura divertida!</h2>
+                <a href="trilha-atividades.html" class="btn-atalho-atividades">Só Atividades Práticas ➔</a>
+            </div>
+
+            <div class="progresso-container">
+                <div class="barra-progresso-info">
+                    <span>Progresso:</span>
+                    <span id="porcentagemProgressoTrilha" class="porcentagem-texto">0%</span>
+                </div>
+                <div class="barra-progresso-fundo">
+                    <div id="barraDeProgressoTrilha" class="barra-progresso-preenchimento"></div>
+                </div>
+            </div>
+
+            <ul class="lista-etapas">
+                <li class="item-etapa">
+                    <button class="btn-audio-etapa" data-audio-target="audioEtapa1" aria-label="Ouvir nome da etapa: Aprendendo as Vogais">🔊</button>
+                    <a href="vogais.html" class="etapa-link" data-etapa="1">1. Aprendendo as Vogais</a>
+                </li>
+                <li class="item-etapa">
+                    <button class="btn-audio-etapa" data-audio-target="audioEtapa2" aria-label="Ouvir nome da etapa: Aprendendo os Encontros Vocálicos">🔊</button>
+                    <a href="encontros-vocalicos.html" class="etapa-link" data-etapa="2">2. Aprendendo os Encontros Vocálicos</a>
+                </li>
+                <li class="item-etapa">
+                    <button class="btn-audio-etapa" data-audio-target="audioEtapa3" aria-label="Ouvir nome da etapa: Aprendendo o Alfabeto">🔊</button>
+                    <a href="alfabeto.html" class="etapa-link" data-etapa="3">3. Aprendendo o Alfabeto</a>
+                </li>
+                <li class="item-etapa">
+                    <button class="btn-audio-etapa" data-audio-target="audioEtapa4" aria-label="Ouvir nome da etapa: Aprendendo as Sílabas">🔊</button>
+                    <a href="silabas.html" class="etapa-link" data-etapa="4">4. Aprendendo as Sílabas</a>
+                </li>
+                <li class="item-etapa">
+                    <button class="btn-audio-etapa" data-audio-target="audioEtapa5" aria-label="Ouvir nome da etapa: Aprendendo Palavras">🔊</button>
+                    <a href="palavras.html" class="etapa-link" data-etapa="5">5. Aprendendo Palavras</a>
+                </li>
+                <li class="item-etapa">
+                    <button class="btn-audio-etapa" data-audio-target="audioEtapa6" aria-label="Ouvir nome da etapa: Aprendendo Frases">🔊</button>
+                    <a href="frases.html" class="etapa-link" data-etapa="6">6. Aprendendo Frases</a>
+                </li>
+                <li class="item-etapa">
+                    <button class="btn-audio-etapa" data-audio-target="audioEtapa7" aria-label="Ouvir nome da etapa: Aprendendo Textos">🔊</button>
+                    <a href="textos.html" class="etapa-link" data-etapa="7">7. Aprendendo Textos</a>
+                </li>
+            </ul>
+
+            <div class="acoes-progresso">
+                <button id="btnLimparProgressoTrilha" class="btn-acao">Limpar Progresso</button>
+                <a href="index.html" class="btn-voltar btn-acao">Voltar para a Apresentação</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aprender Brincando. Todos os direitos reservados.</p>
+    </footer>
+
+    <audio id="audioEtapa1" src="audios/trilha/trilha-vogais.mp3" preload="auto"></audio>
+    <audio id="audioEtapa2" src="audios/trilha/trilha-encontros.mp3" preload="auto"></audio>
+    <audio id="audioEtapa3" src="audios/trilha/trilha-alfabeto.mp3" preload="auto"></audio>
+    <audio id="audioEtapa4" src="audios/trilha/trilha-silabas.mp3" preload="auto"></audio>
+    <audio id="audioEtapa5" src="audios/trilha/trilha-palavras.mp3" preload="auto"></audio>
+    <audio id="audioEtapa6" src="audios/trilha/trilha-frases.mp3" preload="auto"></audio>
+    <audio id="audioEtapa7" src="audios/trilha/trilha-textos.mp3" preload="auto"></audio>
+
+    <script src="global-script.js"></script>
+    <script src="trilha-script.js"></script>
+</body>
+</html>

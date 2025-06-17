@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática: Encontros Vocálicos - Aprender Brincando</title>
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="atividade-encontros-vocalicos-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playwrite+BR:wght@100..400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="img/logo-aprender-brincando.png" alt="Logo Aprender Brincando" class="logo">
+            <h1>Atividade Prática: Encontros Vocálicos</h1>
+        </div>
+    </header>
+
+    <main class="container pagina-atividade">
+        <section class="conteudo-atividade">
+            <h2 class="titulo-pagina-atividade">Pratique os Encontros Vocálicos!</h2>
+
+            <article class="licao" id="licaoEV1">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 1: Palavras Escondidas</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoEV1Titulo" aria-label="Ouvir título da Lição 1">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Ouça a palavra e clique nela se você acha que ela possui um encontro vocálico. Cuidado, nem todas têm!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoEV1Enunciado" aria-label="Ouvir enunciado da Lição 1">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoEV1">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoEV1" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoEV1" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoEV1">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoEV1" class="btn-refazer-licao btn-acao">Refazer Lição 1</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoEV1"></div>
+            </article>
+
+            <article class="licao" id="licaoEV2">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 2: Detetive dos Encontros</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoEV2Titulo" aria-label="Ouvir título da Lição 2">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Ouça a palavra e depois escolha qual encontro vocálico está presente nela. Você só tem uma chance por palavra!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoEV2Enunciado" aria-label="Ouvir enunciado da Lição 2">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoEV2">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoEV2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoEV2" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoEV2">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoEV2" class="btn-refazer-licao btn-acao">Refazer Lição 2</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoEV2"></div>
+            </article>
+
+            <article class="licao" id="licaoEV3">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 3: Qual Encontro Você Ouve?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoEV3Titulo" aria-label="Ouvir título da Lição 3">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Ouça o som do encontro vocálico e clique na opção escrita correta. Cada opção também tem um som para você conferir!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoEV3Enunciado" aria-label="Ouvir enunciado da Lição 3">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoEV3">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoEV3" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoEV3" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoEV3">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoEV3" class="btn-refazer-licao btn-acao">Refazer Lição 3</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoEV3"></div>
+            </article>
+
+            <article class="licao" id="licaoEV4">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 4: Classifique o Encontro!</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoEV4Titulo" aria-label="Ouvir título da Lição 4">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Ouça e veja a palavra. Identifique o encontro vocálico principal e classifique-o como Ditongo, Tritongo ou Hiato. Clique no 🔊 ao lado de cada tipo para ouvir!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoEV4Enunciado" aria-label="Ouvir enunciado da Lição 4">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoEV4">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoEV4" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoEV4" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoEV4">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoEV4" class="btn-refazer-licao btn-acao">Refazer Lição 4</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoEV4"></div>
+            </article>
+
+            <div class="navegacao-atividade">
+                <a href="encontros-vocalicos.html" class="btn-voltar btn-acao">Voltar para Teoria</a>
+                <a href="trilha.html" class="btn-avancar btn-acao">Voltar para a Trilha</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aprender Brincando. Todos os direitos reservados.</p>
+    </footer>
+
+    <audio id="audioAcertou" src="audios/voce acertou.mp3" preload="auto"></audio>
+    <audio id="audioErrou" src="audios/voce errou.mp3" preload="auto"></audio>
+    <audio id="audioRefazerAtividade" src="audios/refazer_licao.mp3" preload="auto"></audio>
+
+    <audio id="audioLicaoEV1Titulo" src="audios/encontros/licaoEV1_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoEV1Enunciado" src="audios/encontros/licaoEV1_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioPalavraCaixaEV1" src="audios/encontros/palavra_caixa_ev1.mp3" preload="auto"></audio>
+    <audio id="audioPalavraLeiteEV1" src="audios/encontros/palavra_leite_ev1.mp3" preload="auto"></audio>
+    <audio id="audioPalavraOuroEV1" src="audios/encontros/palavra_ouro_ev1.mp3" preload="auto"></audio>
+    <audio id="audioPalavraPaoEV1" src="audios/encontros/palavra_pao_ev1.mp3" preload="auto"></audio>
+    <audio id="audioPalavraMaeEV1" src="audios/encontros/palavra_mae_ev1.mp3" preload="auto"></audio>
+    <audio id="audioPalavraSaudeEV1" src="audios/encontros/palavra_saude_ev1.mp3" preload="auto"></audio>
+    <audio id="audioPalavraPoetaEV1" src="audios/encontros/palavra_poeta_ev1.mp3" preload="auto"></audio>
+    <audio id="audioPalavraSolEV1" src="audios/encontros/palavra_sol_ev1.mp3" preload="auto"></audio>
+    <audio id="audioPalavraFacaEV1" src="audios/encontros/palavra_faca_ev1.mp3" preload="auto"></audio>
+    <audio id="audioPalavraGatoEV1" src="audios/encontros/palavra_gato_ev1.mp3" preload="auto"></audio>
+
+    <audio id="audioLicaoEV2Titulo" src="audios/encontros/licaoEV2_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoEV2Enunciado" src="audios/encontros/licaoEV2_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioPaiEV2" src="audios/encontros/palavra_pai_ev2.mp3" preload="auto"></audio>
+    <audio id="audioCeuEV2" src="audios/encontros/palavra_ceu_ev2.mp3" preload="auto"></audio>
+    <audio id="audioBoiEV2" src="audios/encontros/palavra_boi_ev2.mp3" preload="auto"></audio>
+    <audio id="audioMaeEV2" src="audios/encontros/palavra_mae_ev2.mp3" preload="auto"></audio>
+    <audio id="audioPaoEV2" src="audios/encontros/palavra_pao_ev2.mp3" preload="auto"></audio>
+    <audio id="audioLeiteEV2" src="audios/encontros/palavra_leite_ev2.mp3" preload="auto"></audio>
+    <audio id="audioFlautaEV2" src="audios/encontros/palavra_flauta_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptAI_EV2" src="audios/encontros/opcao_ai_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptEU_EV2" src="audios/encontros/opcao_eu_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptUI_EV2" src="audios/encontros/opcao_ui_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptOI_EV2" src="audios/encontros/opcao_oi_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptAU_EV2" src="audios/encontros/opcao_au_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptEI_EV2" src="audios/encontros/opcao_ei_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptIU_EV2" src="audios/encontros/opcao_iu_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptAETil_EV2" src="audios/encontros/opcao_ae_til_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptAOTil_EV2" src="audios/encontros/opcao_ao_til_ev2.mp3" preload="auto"></audio>
+    <audio id="audioEncOptOU_EV2" src="audios/encontros/opcao_ou_ev2.mp3" preload="auto"></audio>
+
+    <audio id="audioLicaoEV3Titulo" src="audios/encontros/licaoEV3_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoEV3Enunciado" src="audios/encontros/licaoEV3_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioSomAI_EV3" src="audios/encontros/som_ai_ev3.mp3" preload="auto"></audio>
+    <audio id="audioSomEU_EV3" src="audios/encontros/som_eu_ev3.mp3" preload="auto"></audio>
+    <audio id="audioSomOI_EV3" src="audios/encontros/som_oi_ev3.mp3" preload="auto"></audio>
+    <audio id="audioSomAU_EV3" src="audios/encontros/som_au_ev3.mp3" preload="auto"></audio>
+    <audio id="audioSomAOTil_EV3" src="audios/encontros/som_ao_til_ev3.mp3" preload="auto"></audio>
+    <audio id="audioSomUI_EV3" src="audios/encontros/som_ui_ev3.mp3" preload="auto"></audio>
+    <audio id="audioSomIA_EV3" src="audios/encontros/som_ia_ev3.mp3" preload="auto"></audio>
+    <audio id="audioEncOptIA_EV3" src="audios/encontros/opcao_ia_ev3.mp3" preload="auto"></audio>
+    <audio id="audioEncOptUA_EV3" src="audios/encontros/opcao_ua_ev3.mp3" preload="auto"></audio>
+    <audio id="audioLicaoEV4Titulo" src="audios/encontros/licaoEV4_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoEV4Enunciado" src="audios/encontros/licaoEV4_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioCaixaEV4" src="audios/encontros/palavra_caixa_ev4.mp3" preload="auto"></audio>
+    <audio id="audioSaudeEV4" src="audios/encontros/palavra_saude_ev4.mp3" preload="auto"></audio>
+    <audio id="audioParaguaiEV4" src="audios/encontros/palavra_paraguai_ev4.mp3" preload="auto"></audio>
+    <audio id="audioLeaoEV4" src="audios/encontros/palavra_leao_ev4.mp3" preload="auto"></audio>
+    <audio id="audioViolaEV4" src="audios/encontros/palavra_viola_ev4.mp3" preload="auto"></audio>
+    <audio id="audioEnxagueiEV4" src="audios/encontros/palavra_enxaguei_ev4.mp3" preload="auto"></audio>
+    <audio id="audioNoiteEV4" src="audios/encontros/palavra_noite_ev4.mp3" preload="auto"></audio>
+    <audio id="audioTipoDitongoEV4" src="audios/encontros/tipo_ditongo_ev4.mp3" preload="auto"></audio>
+    <audio id="audioTipoTritongoEV4" src="audios/encontros/tipo_tritongo_ev4.mp3" preload="auto"></audio>
+    <audio id="audioTipoHiatoEV4" src="audios/encontros/tipo_hiato_ev4.mp3" preload="auto"></audio>
+
+
+    <script src="global-script.js"></script>
+    <script src="atividade-encontros-vocalicos-script.js"></script>
+</body>
+</html>

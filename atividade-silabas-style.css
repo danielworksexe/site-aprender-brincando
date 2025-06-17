@@ -1,0 +1,257 @@
+/* ================================================================= */
+/* === PÁGINA DE ATIVIDADE PRÁTICA: SÍLABAS === */
+/* ================================================================= */
+
+/* Estilos gerais herdados ou similares a outras páginas de atividade */
+.pagina-atividade .conteudo-atividade {
+    padding: 20px;
+}
+
+.titulo-pagina-atividade {
+    color: #FF6B6B;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.licao {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.licao-header,
+.licao-enunciado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.titulo-licao {
+    font-size: 1.7em;
+    color: #4A4A4A;
+    margin: 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.licao-enunciado p {
+    font-size: 1.15em;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.btn-audio-auxiliar {
+    background: none; border: none; font-size: 1.6em; color: #FFC107;
+    cursor: pointer; padding: 0 5px; transition: color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+.btn-audio-auxiliar:hover { color: #FFA000; transform: scale(1.1); }
+.btn-audio-auxiliar.audio-tocando { color: #77DD77; }
+.btn-audio-auxiliar:disabled { color: #ccc; cursor: default; transform: none; }
+
+.licao-feedback-progresso {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 20px; margin-bottom: 25px; padding: 10px 0;
+}
+.progresso-circular-container { text-align: center; }
+.progresso-circular { display: block; margin: 0 auto 5px auto; transform: rotate(-90deg); }
+.progresso-circular-fundo { fill: none; stroke: #e6e6e6; stroke-width: 3.8; }
+.progresso-circular-barra { fill: none; stroke: #e6e6e6; stroke-width: 2.8; stroke-linecap: round; transition: stroke-dasharray 0.3s ease-out, stroke 0.3s ease-out; }
+.progresso-circular-barra.cor-acerto { stroke: #77DD77 !important; }
+.progresso-circular-barra.cor-erro { stroke: #FF6B6B !important; }
+.progresso-circular-texto { font-family: 'Open Sans', sans-serif; font-size: 0.6em; font-weight: bold; fill: #555; text-anchor: middle; transform: rotate(90deg) translate(0, -33px); }
+.legenda-progresso { font-size: 0.85em; color: #666; margin-top: 0; }
+
+.area-desafios-licao {
+    padding: 20px; background-color: #f4f9ff; /* Um azul ainda mais claro */
+    border: 1px dashed #d6e7ff; border-radius: 8px; margin-top: 15px;
+    margin-bottom: 25px; min-height: 200px; display: flex;
+    flex-direction: column; align-items: center; gap: 25px;
+}
+
+.btn-refazer-licao.btn-acao {
+    background-color: #FFC107; color: #424242; border-color: #FBC02D;
+    margin-top: 0; width: auto;
+}
+.btn-refazer-licao.btn-acao:hover { background-color: #FFA000; border-color: #F9A825; }
+
+/* --- LIÇÃO 1 SÍLABAS: Qual é a SÍLABA? --- */
+.desafio-item-licaosilabas1 {
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+    padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%; max-width: 550px;
+}
+.btn-audio-som-silaba-l1s { /* Botão principal para ouvir o som da sílaba */
+    background-color: #4CAF50; color: white; border: none; padding: 12px 25px;
+    font-size: 1.2em; font-weight: bold; border-radius: 25px; cursor: pointer;
+    transition: background-color 0.2s ease; display: flex; align-items: center; gap: 8px;
+}
+.btn-audio-som-silaba-l1s:hover { background-color: #45a049; }
+.opcoes-silabas-licaosilabas1 {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;
+}
+.opcao-silaba-L1S { /* Estilo para cada opção de sílaba clicável */
+    padding: 15px 20px; border: 2px solid #ccc; border-radius: 8px;
+    font-size: 2em; /* Será ajustado pelas classes de fonte APLICADAS À SÍLABA INTERNA */
+    cursor: pointer; background-color: #f8f9fa;
+    transition: background-color 0.2s, border-color 0.2s; min-width: 80px; text-align: center;
+    display: flex; /* Para alinhar bastão e cursiva se estiverem no mesmo div */
+    flex-direction: column; /* Para bastão em cima e cursiva embaixo, se desejar */
+    align-items: center;
+    gap: 5px;
+}
+.opcao-silaba-L1S .silaba-bastao, .opcao-silaba-L1S .silaba-cursiva { /* Para estilizar dentro da opção */
+    line-height: 1.1;
+}
+.opcao-silaba-L1S:hover { background-color: #e9ecef; border-color: #adb5bd;}
+.opcao-silaba-L1S.correta { background-color: #d4edda !important; color: #155724 !important; border-color: #c3e6cb !important; }
+.opcao-silaba-L1S.errada { background-color: #f8d7da !important; color: #721c24 !important; border-color: #f5c6cb !important; animation: shake 0.4s; }
+.opcao-silaba-L1S.correta-nao-escolhida { background-color: #fff3cd !important; color: #856404 !important; border-color: #ffeeba !important; }
+.opcao-silaba-L1S.desabilitada { opacity: 0.6; cursor: not-allowed; pointer-events: none; }
+
+/* --- LIÇÃO 2 SÍLABAS: Onde está a SÍLABA na Palavra? --- */
+.desafio-item-licaosilabas2 {
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+    padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%; max-width: 600px;
+}
+.prompt-silaba-alvo-l2s { /* "Encontre a sílaba X:" */
+    font-size: 1.5em; font-weight: bold; color: #e67e22; margin-bottom: 10px;
+    display: flex; align-items: center; gap:10px;
+}
+.btn-audio-prompt-l2s {
+    background: none; border: none; font-size: 1.3em; color: #e67e22; cursor: pointer; padding: 0;
+}
+.palavra-segmentada-l2s { /* Container para a palavra com sílabas clicáveis */
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 2px; /* Sem gap para parecer uma palavra */
+    font-size: 2.5em; font-weight: bold; margin-bottom: 15px;
+    border: 2px solid #ecf0f1; padding: 10px; border-radius: 8px;
+}
+.segmento-silaba-l2s { /* Cada sílaba clicável da palavra */
+    padding: 5px 8px; cursor: pointer; background-color: #fff;
+    border: 1px dashed #ddd; margin: 0 1px; /* Leve separação visual */
+    transition: background-color 0.2s, transform 0.1s;
+}
+.segmento-silaba-l2s:hover { background-color: #f5f5f5; transform: scale(1.05); }
+.segmento-silaba-l2s.correta { background-color: #a5d6a7 !important; color: #1b5e20 !important; }
+.segmento-silaba-l2s.errada { background-color: #ef9a9a !important; color: #c62828 !important; animation: shake 0.3s; }
+.segmento-silaba-l2s.desabilitada { opacity: 0.7; cursor: default; pointer-events: none; }
+
+/* --- LIÇÃO 3 SÍLABAS: Qual SÍLABA Começa? --- */
+.desafio-item-licaosilabas3 {
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+    padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%; max-width: 500px;
+}
+.emoji-desafio-l3s { /* Para exibir o emoji */
+    font-size: 6em; margin-bottom: 10px; line-height: 1;
+}
+.btn-audio-palavra-l3s {
+    background-color: #9b59b6; color: white; border: none; padding: 10px 15px;
+    font-size: 1em; border-radius: 20px; cursor: pointer; transition: background-color 0.2s ease;
+    display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+}
+.btn-audio-palavra-l3s:hover { background-color: #8e44ad; }
+.opcoes-silabas-licaosilabas3 {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;
+}
+/* Reutilizar .opcao-silaba-L1S para as opções da Lição 3, ou criar .opcao-silaba-L3S */
+
+/* --- LIÇÃO 4 SÍLABAS: Quantas SÍLABAS Tem? --- */
+.desafio-item-licaosilabas4 {
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+    padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%; max-width: 500px;
+}
+.palavra-display-l4s { /* Para mostrar a palavra da qual contar sílabas */
+    font-size: 2.5em; font-weight: bold; color: #16a085; margin-bottom: 10px;
+    padding: 10px; background-color: #f1fcf9; border-radius: 6px;
+    display: flex; align-items: center; gap: 10px;
+}
+.btn-audio-palavra-l4s {
+    background: none; border: none; font-size: 1.2em; color: #16a085;
+    cursor: pointer; padding: 0 5px;
+}
+.opcoes-numero-silabas-l4s {
+    display: flex; justify-content: center; gap: 15px; margin-top: 10px;
+}
+.opcao-numero-l4s { /* Botão para escolher número de sílabas */
+    background-color: #3498db; color: white; border: none; font-size: 1.5em;
+    font-weight: bold; padding: 15px 25px; border-radius: 8px; cursor: pointer;
+    min-width: 60px; text-align: center; transition: background-color 0.2s, transform 0.1s;
+}
+.opcao-numero-l4s:hover { background-color: #2980b9; transform: scale(1.05); }
+.opcao-numero-l4s.correta { background-color: #2ecc71 !important; }
+.opcao-numero-l4s.errada { background-color: #e74c3c !important; animation: shake 0.4s; }
+.opcao-numero-l4s.correta-nao-escolhida { border: 3px solid #2ecc71 !important; background-color: #f8f9fa !important; color: #2ecc71 !important; }
+.opcao-numero-l4s.desabilitada { opacity: 0.6; cursor: not-allowed; pointer-events: none; }
+.feedback-divisao-silabica-l4s { /* Para mostrar a palavra dividida */
+    font-size: 1.2em; color: #555; margin-top: 15px; font-weight: bold;
+    background-color: #f9f9f9; padding: 10px; border-radius: 6px;
+}
+
+
+.navegacao-atividade {
+    margin-top: 40px; display: flex; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap;
+}
+.navegacao-atividade .btn-acao { flex-grow: 1; max-width: calc(50% - 10px); }
+
+
+/* =============================================================== */
+/* === RESPONSIVIDADE (Específica para Atividade Sílabas) === */
+/* =============================================================== */
+@media (max-width: 768px) {
+    /* Ajustes gerais para lições se necessário */
+    .area-desafios-licao { gap: 20px; }
+
+    /* Lição 1 */
+    .opcao-silaba-L1S { font-size: 1.8em !important; padding: 12px 15px; min-width: 70px; }
+
+    /* Lição 2 */
+    .palavra-segmentada-l2s { font-size: 2em; }
+    .segmento-silaba-l2s { padding: 4px 6px; }
+    .prompt-silaba-alvo-l2s { font-size: 1.3em; }
+
+    /* Lição 3 */
+    .emoji-desafio-l3s { font-size: 5em; }
+
+    /* Lição 4 */
+    .palavra-display-l4s { font-size: 2em; }
+    .opcao-numero-l4s { font-size: 1.3em; padding: 12px 20px; }
+}
+
+@media (max-width: 480px) {
+    .licao { padding: 15px 20px; }
+    .licao-feedback-progresso { flex-direction: column; gap: 15px; align-items: center;}
+
+    /* Lição 1 */
+    .opcoes-silabas-licaosilabas1 { gap: 10px; }
+    .opcao-silaba-L1S { font-size: 1.6em !important; padding: 10px; min-width: 60px; }
+
+    /* Lição 2 */
+    .palavra-segmentada-l2s { font-size: 1.7em; }
+    .prompt-silaba-alvo-l2s { font-size: 1.2em; text-align: center;}
+
+    /* Lição 3 */
+    .emoji-desafio-l3s { font-size: 4em; }
+
+    /* Lição 4 */
+    .palavra-display-l4s { font-size: 1.8em; flex-direction: column; gap: 5px; }
+    .opcoes-numero-silabas-l4s { gap: 10px; }
+    .opcao-numero-l4s { font-size: 1.2em; padding: 10px 15px; }
+    .feedback-divisao-silabica-l4s { font-size: 1.1em; }
+
+    .navegacao-atividade .btn-acao { max-width: 100%; }
+}
+
+/* Herança de animação e classes de fonte do global-style.css */
+@keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-3px);} 75% {transform: translateX(3px);} }

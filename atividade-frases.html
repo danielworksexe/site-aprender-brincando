@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática: Frases - Aprender Brincando</title>
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="atividade-frases-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Open+Sans:wght@400;700&family=Playwrite+BR:wght@100..400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="img/logo-aprender-brincando.png" alt="Logo Aprender Brincando" class="logo">
+            <h1>Atividade Prática: Frases</h1>
+        </div>
+    </header>
+
+    <main class="container pagina-atividade">
+        <section class="conteudo-atividade">
+            <h2 class="titulo-pagina-atividade">Hora de Brincar com as Frases!</h2>
+
+            <article class="licao" id="licaoFrases1">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 1: Qual Figura Combina?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoFrases1Titulo">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Leia a frase e clique na figura que representa o que está escrito.</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoFrases1Enunciado">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="progresso-circular-container" id="progressoLicaoFrases1">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoFrases1" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoFrases1" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoFrases1">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoFrases1" class="btn-refazer-licao btn-acao">Refazer Lição 1</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoFrases1"></div>
+            </article>
+
+            <article class="licao" id="licaoFrases2">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 2: Verdadeiro ou Falso?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoFrases2Titulo">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Olhe para a figura. A frase que aparece abaixo está certa ou errada? Clique em "Verdadeiro" ou "Falso".</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoFrases2Enunciado">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="progresso-circular-container" id="progressoLicaoFrases2">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoFrases2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoFrases2" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoFrases2">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoFrases2" class="btn-refazer-licao btn-acao">Refazer Lição 2</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoFrases2"></div>
+            </article>
+
+            <article class="licao" id="licaoFrases3">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 3: Ordene a Bagunça!</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoFrases3Titulo">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>As palavras estão fora de ordem! Clique nelas na sequência certa para formar uma frase que faça sentido.</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoFrases3Enunciado">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                     <div class="progresso-circular-container" id="progressoLicaoFrases3">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoFrases3" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoFrases3" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoFrases3">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoFrases3" class="btn-refazer-licao btn-acao">Refazer Lição 3</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoFrases3"></div>
+            </article>
+
+            <article class="licao" id="licaoFrases4">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 4: Monte sua Própria História!</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoFrases4Titulo">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Seja o escritor! Escolha um item de cada coluna para criar suas próprias frases divertidas.</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoFrases4Enunciado">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                     <div class="progresso-circular-container" id="progressoLicaoFrases4">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoFrases4" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoFrases4" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoFrases4">Frases Criadas</p>
+                    </div>
+                    <button id="refazerLicaoFrases4" class="btn-refazer-licao btn-acao">Começar de Novo</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoFrases4"></div>
+            </article>
+
+            <div class="navegacao-atividade">
+                <a href="frases.html" class="btn-voltar btn-acao">Voltar para Teoria das Frases</a>
+                <a href="trilha.html" class="btn-avancar btn-acao">Voltar para a Trilha</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aprender Brincando. Todos os direitos reservados.</p>
+    </footer>
+
+    <audio id="audioAcertou" src="audios/acertou.mp3" preload="auto"></audio>
+    <audio id="audioErrou" src="audios/errou.mp3" preload="auto"></audio>
+    <audio id="audioRefazerAtividade" src="audios/refazer-atividade.mp3" preload="auto"></audio>
+
+    <audio id="audioLicaoFrases1Titulo" src="audios/licao_frases1_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoFrases1Enunciado" src="audios/licao_frases1_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoFrases2Titulo" src="audios/licao_frases2_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoFrases2Enunciado" src="audios/licao_frases2_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoFrases3Titulo" src="audios/licao_frases3_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoFrases3Enunciado" src="audios/licao_frases3_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoFrases4Titulo" src="audios/licao_frases4_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoFrases4Enunciado" src="audios/licao_frases4_enunciado.mp3" preload="auto"></audio>
+    
+    <script src="global-script.js"></script>
+    <script src="atividade-frases-script.js"></script>
+</body>
+</html>

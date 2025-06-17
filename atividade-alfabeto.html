@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática: Alfabeto - Aprender Brincando</title>
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="atividade-alfabeto-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playwrite+BR:wght@100..400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="img/logo-aprender-brincando.png" alt="Logo Aprender Brincando" class="logo">
+            <h1>Atividade Prática: Alfabeto</h1>
+        </div>
+    </header>
+
+    <main class="container pagina-atividade">
+        <section class="conteudo-atividade">
+            <h2 class="titulo-pagina-atividade">Vamos Praticar o Alfabeto!</h2>
+
+            <article class="licao" id="licaoAlfabeto1">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 1: O Som da Letra</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoAlfabeto1Titulo" aria-label="Ouvir título da Lição 1 do Alfabeto">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Ouça o som da letra e clique na letra escrita correta. As letras podem aparecer de jeitos diferentes!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoAlfabeto1Enunciado" aria-label="Ouvir enunciado da Lição 1 do Alfabeto">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoAlfabeto1">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoAlfabeto1" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoAlfabeto1" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoAlfabeto1">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoAlfabeto1" class="btn-refazer-licao btn-acao">Refazer Lição 1</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoAlfabeto1">
+                    </div>
+            </article>
+
+            <article class="licao" id="licaoAlfabeto2">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 2: Figura Mágica</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoAlfabeto2Titulo" aria-label="Ouvir título da Lição 2 do Alfabeto">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Veja a figura, ouça o nome dela e clique na letra com que ela começa!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoAlfabeto2Enunciado" aria-label="Ouvir enunciado da Lição 2 do Alfabeto">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoAlfabeto2">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoAlfabeto2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoAlfabeto2" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoAlfabeto2">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoAlfabeto2" class="btn-refazer-licao btn-acao">Refazer Lição 2</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoAlfabeto2">
+                    </div>
+            </article>
+
+            <article class="licao" id="licaoAlfabeto3">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 3: Palavra Secreta</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoAlfabeto3Titulo" aria-label="Ouvir título da Lição 3 do Alfabeto">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Veja a figura e a palavra com uma letra faltando. Ouça a palavra completa e clique na letra que falta para completá-la!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoAlfabeto3Enunciado" aria-label="Ouvir enunciado da Lição 3 do Alfabeto">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoAlfabeto3">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoAlfabeto3" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoAlfabeto3" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoAlfabeto3">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoAlfabeto3" class="btn-refazer-licao btn-acao">Refazer Lição 3</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoAlfabeto3">
+                    </div>
+            </article>
+
+            <article class="licao" id="licaoAlfabeto4">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 4: Letras Fugitivas</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoAlfabeto4Titulo" aria-label="Ouvir título da Lição 4 do Alfabeto">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Ouça qual letra você deve procurar. Depois, clique em todas as vezes que essa letra aparece na palavra!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoAlfabeto4Enunciado" aria-label="Ouvir enunciado da Lição 4 do Alfabeto">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoAlfabeto4">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoAlfabeto4" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoAlfabeto4" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoAlfabeto4">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoAlfabeto4" class="btn-refazer-licao btn-acao">Refazer Lição 4</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoAlfabeto4">
+                    </div>
+            </article>
+
+            <div class="navegacao-atividade">
+                <a href="alfabeto.html" class="btn-voltar btn-acao">Voltar para Teoria do Alfabeto</a>
+                <a href="trilha.html" class="btn-avancar btn-acao">Voltar para a Trilha</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aprender Brincando. Todos os direitos reservados.</p>
+    </footer>
+
+    <audio id="audioAcertou" src="audios/acertou.mp3" preload="auto"></audio>
+    <audio id="audioErrou" src="audios/errou.mp3" preload="auto"></audio>
+    <audio id="audioRefazerAtividade" src="audios/refazer-atividade.mp3" preload="auto"></audio>
+
+    <audio id="audioLicaoAlfabeto1Titulo" src="audios/licao_alfabeto1_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoAlfabeto1Enunciado" src="audios/licao_alfabeto1_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoAlfabeto2Titulo" src="audios/licao_alfabeto2_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoAlfabeto2Enunciado" src="audios/licao_alfabeto2_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoAlfabeto3Titulo" src="audios/licao_alfabeto3_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoAlfabeto3Enunciado" src="audios/licao_alfabeto3_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoAlfabeto4Titulo" src="audios/licao_alfabeto4_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoAlfabeto4Enunciado" src="audios/licao_alfabeto4_enunciado.mp3" preload="auto"></audio>
+
+    <audio id="audioSomLetraA_L1" src="audios/som_letra_a_l1.mp3" preload="auto"></audio>
+    <audio id="audioSomLetraB_L1" src="audios/som_letra_b_l1.mp3" preload="auto"></audio>
+    <audio id="audioSomLetraZ_L1" src="audios/som_letra_z_l1.mp3" preload="auto"></audio>
+    <audio id="audioOpcaoLetraA_L1" src="audios/opcao_letra_a_l1.mp3" preload="auto"></audio>
+    <audio id="audioBola_L2" src="audios/palavra_bola_l2.mp3" preload="auto"></audio>
+    <audio id="audioCasa_L2" src="audios/palavra_casa_l2.mp3" preload="auto"></audio>
+    <audio id="audioDado_L2" src="audios/palavra_dado_l2.mp3" preload="auto"></audio>
+    <audio id="audioBola_L3" src="audios/palavra_bola_l3.mp3" preload="auto"></audio> <audio id="audioCasa_L3" src="audios/palavra_casa_l3.mp3" preload="auto"></audio>
+    <audio id="audioEncontreLetraA_L4" src="audios/encontre_letra_a_l4.mp3" preload="auto"></audio>
+    <audio id="audioEncontreLetraM_L4" src="audios/encontre_letra_m_l4.mp3" preload="auto"></audio>
+    <audio id="audioMacaco_L4" src="audios/palavra_macaco_l4.mp3" preload="auto"></audio>
+    <audio id="audioBanana_L4" src="audios/palavra_banana_l4.mp3" preload="auto"></audio>
+    <script src="global-script.js"></script>
+    <script src="atividade-alfabeto-script.js"></script>
+</body>
+</html>

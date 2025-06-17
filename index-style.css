@@ -1,0 +1,121 @@
+/* ============================================= */
+/* === PÁGINA INICIAL (index.html) ESPECÍFICOS === */
+/* ============================================= */
+.apresentacao { /* Container principal da página de apresentação */
+    text-align: center;
+}
+
+.apresentacao h2 {
+    color: #FF6B6B; /* Cor específica para títulos na apresentação */
+    margin-top: 30px; 
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.apresentacao p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #555555; /* Cor específica para parágrafos na apresentação */
+}
+
+.btn-comecar { /* Estilo específico para o botão "Vamos Começar!" */
+    display: inline-block;
+    background-color: #FFEB3B; 
+    color: #424242; 
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 2px solid #FBC02D; 
+}
+.btn-comecar:hover {
+    background-color: #FDD835; 
+    transform: translateY(-2px);
+    border-color: #F9A825;
+}
+
+/* Carrossel (index.html) */
+.carrossel-container {
+    max-width: 700px;
+    position: relative;
+    margin: 20px auto 30px auto; 
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+.carrossel-slides {
+    display: flex;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none; 
+}
+.slide img {
+    width: 100%;
+    height: auto; 
+    max-height: 400px; 
+    object-fit: cover; 
+    display: block;
+    border-radius: 8px; 
+}
+.legenda-slide {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+}
+.indicador { 
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 3px;
+    background-color: #FFCDD2; 
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.ativo, .indicador:hover { 
+    background-color: #FF6B6B; 
+}
+.fade { 
+    animation-name: fade;
+    animation-duration: 1.0s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* ============================================= */
+/* === RESPONSIVIDADE (Específica para Index) === */
+/* ============================================= */
+@media (max-width: 768px) {
+    .apresentacao h2 { font-size: 1.6em; }
+    .apresentacao p { font-size: 1em; }
+    .btn-comecar { font-size: 1.1em; padding: 10px 20px; }
+    .carrossel-container { max-width: 95%; }
+    .legenda-slide{ font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+    .apresentacao h2 { font-size: 1.4em; }
+    .apresentacao p { font-size: 0.95em; }
+    .btn-comecar { 
+        font-size: 1em; 
+        padding: 10px 18px; 
+        width: 80%; /* Ocupa mais largura em telas pequenas */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .legenda-slide { font-size: 11px; }
+}

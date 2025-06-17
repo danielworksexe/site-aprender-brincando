@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática: Sílabas - Aprender Brincando</title>
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="atividade-silabas-style.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playwrite+BR:wght@100..400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="img/logo-aprender-brincando.png" alt="Logo Aprender Brincando" class="logo">
+            <h1>Atividade Prática: Sílabas</h1>
+        </div>
+    </header>
+
+    <main class="container pagina-atividade">
+        <section class="conteudo-atividade">
+            <h2 class="titulo-pagina-atividade">Hora de Brincar com as Sílabas!</h2>
+
+            <article class="licao" id="licaoSilabas1">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 1: Qual é a SÍLABA?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoSilabas1Titulo" aria-label="Ouvir título da Lição 1 de Sílabas">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Ouça o som da sílaba e clique na sílaba escrita correta. Elas podem ser simples ou mais complexas!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoSilabas1Enunciado" aria-label="Ouvir enunciado da Lição 1 de Sílabas">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoSilabas1">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoSilabas1" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoSilabas1" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoSilabas1">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoSilabas1" class="btn-refazer-licao btn-acao">Refazer Lição 1</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoSilabas1">
+                    </div>
+            </article>
+
+            <article class="licao" id="licaoSilabas2">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 2: Onde está a SÍLABA?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoSilabas2Titulo" aria-label="Ouvir título da Lição 2 de Sílabas">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Ouça a sílaba e clique no pedacinho certo da palavra!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoSilabas2Enunciado" aria-label="Ouvir enunciado da Lição 2 de Sílabas">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoSilabas2">
+                         <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoSilabas2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoSilabas2" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoSilabas2">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoSilabas2" class="btn-refazer-licao btn-acao">Refazer Lição 2</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoSilabas2">
+                    </div>
+            </article>
+
+            <article class="licao" id="licaoSilabas3">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 3: Qual SÍLABA Começa?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoSilabas3Titulo" aria-label="Ouvir título da Lição 3 de Sílabas">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Veja a figura, ouça o nome e clique na sílaba com que ela começa!</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoSilabas3Enunciado" aria-label="Ouvir enunciado da Lição 3 de Sílabas">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoSilabas3">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoSilabas3" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoSilabas3" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoSilabas3">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoSilabas3" class="btn-refazer-licao btn-acao">Refazer Lição 3</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoSilabas3">
+                    </div>
+            </article>
+
+            <article class="licao" id="licaoSilabas4">
+                <div class="licao-header">
+                    <h3 class="titulo-licao">Lição 4: Quantas SÍLABAS Tem?</h3>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoSilabas4Titulo" aria-label="Ouvir título da Lição 4 de Sílabas">🔊</button>
+                </div>
+                <div class="licao-enunciado">
+                    <p>Ouça e veja a palavra. Depois, clique no número que mostra quantas sílabas (pedacinhos) ela tem.</p>
+                    <button class="btn-audio-auxiliar" data-audio-target="audioLicaoSilabas4Enunciado" aria-label="Ouvir enunciado da Lição 4 de Sílabas">🔊</button>
+                </div>
+                <div class="licao-feedback-progresso">
+                    <div class="info-ajuda"></div>
+                    <div class="progresso-circular-container" id="progressoLicaoSilabas4">
+                        <svg class="progresso-circular" width="90" height="90" viewBox="0 0 36 36">
+                            <path class="progresso-circular-fundo" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="progresso-circular-barra" id="barraLicaoSilabas4" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                            <text id="textoLicaoSilabas4" class="progresso-circular-texto" x="18" y="20.35">0%</text>
+                        </svg>
+                        <p class="legenda-progresso" id="legendaProgressoLicaoSilabas4">Acertos</p>
+                    </div>
+                    <button id="refazerLicaoSilabas4" class="btn-refazer-licao btn-acao">Refazer Lição 4</button>
+                </div>
+                <div class="area-desafios-licao" id="areaDesafiosLicaoSilabas4">
+                    </div>
+            </article>
+
+            <div class="navegacao-atividade">
+                <a href="silabas.html" class="btn-voltar btn-acao">Voltar para Teoria das Sílabas</a>
+                <a href="trilha.html" class="btn-avancar btn-acao">Voltar para a Trilha</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aprender Brincando. Todos os direitos reservados.</p>
+    </footer>
+
+    <audio id="audioAcertou" src="audios/acertou.mp3" preload="auto"></audio>
+    <audio id="audioErrou" src="audios/errou.mp3" preload="auto"></audio>
+    <audio id="audioRefazerAtividade" src="audios/refazer-atividade.mp3" preload="auto"></audio>
+
+    <audio id="audioLicaoSilabas1Titulo" src="audios/licao_silabas1_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoSilabas1Enunciado" src="audios/licao_silabas1_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoSilabas2Titulo" src="audios/licao_silabas2_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoSilabas2Enunciado" src="audios/licao_silabas2_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoSilabas3Titulo" src="audios/licao_silabas3_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoSilabas3Enunciado" src="audios/licao_silabas3_enunciado.mp3" preload="auto"></audio>
+    <audio id="audioLicaoSilabas4Titulo" src="audios/licao_silabas4_titulo.mp3" preload="auto"></audio>
+    <audio id="audioLicaoSilabas4Enunciado" src="audios/licao_silabas4_enunciado.mp3" preload="auto"></audio>
+
+    <audio id="audioSilabaBA_L1S" src="audios/silaba_ba_l1s.mp3" preload="auto"></audio>
+    <audio id="audioSilabaCA_L1S" src="audios/silaba_ca_l1s.mp3" preload="auto"></audio>
+    <audio id="audioSilabaCRE_L1S" src="audios/silaba_cre_l1s.mp3" preload="auto"></audio>
+    <audio id="audioEncontreSilabaCA_L2S" src="audios/encontre_silaba_ca_l2s.mp3" preload="auto"></audio>
+    <audio id="audioPalavraMacaco_L2S" src="audios/palavra_macaco_l2s.mp3" preload="auto"></audio>
+    <audio id="audioEncontreSilabaBO_L2S" src="audios/encontre_silaba_bo_l2s.mp3" preload="auto"></audio>
+    <audio id="audioPalavraBoneca_L2S" src="audios/palavra_boneca_l2s.mp3" preload="auto"></audio>
+    <audio id="audioFiguraBola_L3S" src="audios/figura_bola_l3s.mp3" preload="auto"></audio> <audio id="audioFiguraCasa_L3S" src="audios/figura_casa_l3s.mp3" preload="auto"></audio> <audio id="audioPalavraCasa_L4S" src="audios/palavra_casa_l4s.mp3" preload="auto"></audio>
+    <audio id="audioPalavraBorboleta_L4S" src="audios/palavra_borboleta_l4s.mp3" preload="auto"></audio>
+    <audio id="audioPalavraSol_L4S" src="audios/palavra_sol_l4s.mp3" preload="auto"></audio>
+    <script src="global-script.js"></script>
+    <script src="atividade-silabas-script.js"></script> </body>
+</html>
